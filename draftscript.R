@@ -1,9 +1,9 @@
 library(dplyr)
+library(stringr)
 data_salaries = read.csv('salaries.csv')
 head(data_salaries)
 data_salaries[!complete.cases(data_salaries), ]
 names(data_salaries)[colSums(is.na(data_salaries)) > 0]
-library(stringr)
 colnames(data_salaries) = colnames(data_salaries) |>
      str_replace_all("_", " ") |>
      str_to_title() |> 
