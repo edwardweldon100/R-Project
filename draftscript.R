@@ -73,6 +73,7 @@ yearly_job_count = data_salaries %>%
 yearly_job_count
 data_salaries_2024 = data_salaries %>% filter(Work_Year == 2024) %>%
   arrange(desc(Salary_USD))
+data_salaries_2024_FTonly = data_salaries %>% filter(Work_Time_Arrangement == 'Full-time')
 data_salaries_2024_select = data_salaries_2024 %>% filter(Work_Time_Arrangement == 'Full-time') %>% 
   select(Job_Title, Experience_Level, Work_Time_Arrangement, Work_Office_Arrangement, Company_Size, Company_Location_Code3, Company_Location_Name, International, Salary_USD)
 data_salaries_2024_select_asc = data_salaries_2024_select %>% arrange(Salary_USD)
@@ -113,20 +114,8 @@ Title_Time_Arrangement_Summary = Summarise_Salary(data_salaries_2024, c('Job_Tit
 Experience_Time_Arrangement_Summary = Summarise_Salary(data_salaries_2024, c('Experience_Level', 'Work_Time_Arrangement'))
 Office_Time_Arrangement_Summary = Summarise_Salary(data_salaries_2024, c('Work_Office_Arrangement', 'Work_Time_Arrangement'))
 Company_Location_Size_Summary = Summarise_Salary(data_salaries_2024_select, c('Company_Location_Name', 'Company_Size'))
-International_Summary = data_salaries_2024 %>%
-  filter(Work_Time_Arrangement == 'Full-time') %>%
-  group_by(International) %>%
-  summarise(
-    Avg_Salary_USD = round(mean(Salary_USD),0), Count = n(), .groups = 'drop') %>%
-  mutate(Percentage = round(Count / Total_Count_2024 * 100, 2)) %>%
-  arrange(desc(Avg_Salary_USD))
-International_by_Location_Summary = data_salaries_2024 %>%
-  filter(International == 'International', Work_Time_Arrangement == 'Full-time') %>%
-  group_by(International, Company_Location_Name, Employee_Residence_Name) %>%
-  summarise(
-    Avg_Salary_USD = round(mean(Salary_USD),0), Count = n(), .groups = 'drop') %>%
-  mutate(Percentage = round(Count / Total_Count_2024 * 100, 2)) %>%
-  arrange(desc(Avg_Salary_USD))
+International_Summary = Summarise_Salary(data_salaries_2024_FTonly, 'International')
+International_by_Location_Summary = Summarise_Salary(data_salaries_2024_FTonly, c('International','Company_Location_Name', 'Employee_Residence_Name'))
 Job_Title_Summary_asc = Job_Title_Summary %>% arrange(Avg_Salary_USD)
 Company_Location_Name_Summary_asc = Company_Location_Name_Summary %>% arrange(Avg_Salary_USD)
 Title_Experience_Summary_asc = Title_Experience_Summary %>% arrange(Avg_Salary_USD)
@@ -237,3 +226,64 @@ World_Map_by_Salary = plot_ly(
     )
   )
 World_Map_by_Salary
+World_Map_by_Job_Count = plot_ly(
+  data = Company_Location_Name_Summary,
+  type = 'choropleth',
+  locations = ~Company_Location_Code3,
+  z = ~Count,
+  text = ~Company_Location_Name,
+  colorscale = "Oranges",
+  reversescale = FALSE,
+  locationmode = 'ISO-3'
+) %>%
+  layout(
+    title = 'Total Job Count by Company Location',
+    geo = list(
+      showframe = FALSE,
+      showcoastlines = TRUE,
+      projection = list(type = 'equirectangular')
+    )
+  )
+World_Map_by_Job_Count
+Data_Salary_Overall_Histogram = plot_ly(data_salaries_2024_select, x = ~Salary_USD) %>%
+  add_histogram(name = "Overall FT Salary Distribution", nbinsx = 50, opacity = 1) %>%
+  add_trace(
+    x = ~sort(Salary_USD),
+    y = ~ecdf(Salary_USD)(sort(Salary_USD)),
+    type = 'scatter',
+    mode = 'lines',
+    name = 'ECDF',
+    yaxis = 'y2'
+  ) %>%
+  layout(
+    title = "FT Salary Distribution with ECDF",
+    xaxis = list(title = "Salary (USD)"),
+    yaxis = list(title = "Count"),
+    yaxis2 = list(
+      title = "ECDF",
+      overlaying = "y",
+      side = "right",
+      range = c(0,1)
+    ),
+    bargap = 0.01
+  )
+Data_Salary_Overall_Histogram
+Stacked_Histogram = function(df, catcol, numcol = 'Salary_USD') {
+  plot_ly(
+    data = df,
+    x = ~get(numcol),
+    color = ~get(catcol),
+    type = "histogram",
+    opacity = .5
+  ) %>%
+    layout(
+      title = paste(catcol, 'Salary Distribution'),
+      xaxis = list(title = 'Salary (USD)'),
+      yaxis = list(title = 'Count'),
+      barmode = "overlay"
+    )
+}
+Stacked_Histogram(data_salaries_2024_FTonly, 'Experience_Level')
+Stacked_Histogram(data_salaries_2024, 'Work_Time_Arrangement')
+Stacked_Histogram(data_salaries_2024_FTonly, 'Company_Size')
+Stacked_Histogram(data_salaries_2024_FTonly, 'International')
