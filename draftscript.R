@@ -16,6 +16,8 @@ colnames(data_salaries)[which(names(data_salaries) == "Salary_In_Usd")] = "Salar
 colnames(data_salaries)[which(names(data_salaries) == "Employee_Residence")] = "Employee_Residence_Code"
 colnames(data_salaries)[which(names(data_salaries) == "Company_Location")] = "Company_Location_Code"
 colnames(data_salaries)[which(names(data_salaries) == "Experience_Level")] = "Experience_Level_Code"
+data_salaries$Company_Size = factor(data_salaries$Company_Size, 
+                    levels = c('S', 'M', 'L'))
 country_codes_legend = read.csv('continents2.csv')
 field_title_legend = read.csv('data_field_title_legend.csv')
 country_name_lookup = function(code) {
@@ -52,7 +54,8 @@ data_salaries = data_salaries %>%
     Field = factor(field_lookup(Job_Title), levels = c('Data Engineering', 'Data Science', 'Data Analysis', 'Business Intelligence', 'Machine Learning', 'Artificial Intelligence   (general)', 'Software Development   (general)', 'Research & Development   (general)')),
     Company_Location_Name = country_name_lookup(Company_Location_Code),
     Company_Location_Code3 = country_code3_lookup(Company_Location_Code),
-    Continent = countrycode(sourcevar = Company_Location_Code3, origin = 'iso3c', destination = 'continent'),
+    Continent = factor(countrycode(sourcevar = Company_Location_Code3, origin = 'iso3c', destination = 'continent'),
+                       levels = c('Americas', 'Europe', 'Oceania', 'Asia', 'Africa')),
     USA = factor(
       ifelse(Company_Location_Code3 == 'USA', 'USA', 'Outside_USA'),
       levels = c('USA', 'Outside_USA'))
@@ -303,18 +306,85 @@ Stacked_Histogram = function(df, catcol, numcol = 'Salary_USD') {
     )
 }
 Box_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
-  plot_ly(df, 
-          y = df[[numcol]], 
-          color = df[[lvl]], 
-          type = "box")
+  plot_ly(
+    data = df,
+    y = ~get(numcol),
+    color = ~get(lvl),
+    type = "box"
+  )
 }
 Box_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
-  plot_ly(df, 
-          x = df[[lvl]], 
-          y = df[[numcol]], 
-          color = df[[subLvl]], 
-          type = "box") %>%
-  layout(boxmode = "group")
+  plot_ly(
+    data = df,
+    x = ~get(lvl),
+    y = ~get(numcol),
+    color = ~get(subLvl),
+    type = "box"
+  ) %>%
+    layout(boxmode = "group")  # Side-by-side grouping
+}
+Violin_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
+  plot_ly(
+    data = df,
+    x = ~get(lvl),
+    y = ~get(numcol),
+    split = ~get(lvl),
+    type = 'violin',
+    box = list(visible = TRUE),
+    meanline = list(visible = TRUE)
+  ) %>%
+    layout(
+      xaxis = list(title = lvl),
+      yaxis = list(title = numcol, zeroline = FALSE)
+    )
+}
+Violin_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
+  plot_ly(
+    data = df,
+    x = ~get(lvl),
+    y = ~get(numcol),
+    color = ~get(subLvl),
+    type = "violin",
+    box = list(visible = TRUE),
+    meanline = list(visible = TRUE)
+  ) %>%
+    layout(
+      xaxis = list(title = lvl),
+      yaxis = list(title = numcol, zeroline = FALSE),
+      violinmode = "group"
+    )
+}
+Bar_1Lvl = function(df, lvl, numcol = 'Salary_USD', aggfun = mean) {
+  df_summary = df %>%
+    group_by(across(all_of(lvl))) %>%
+    summarise(Value = aggfun(.data[[numcol]]), .groups = "drop")
+  plot_ly(
+    data = df_summary,
+    x = ~get(lvl),
+    y = ~Value,
+    color = ~get(lvl),
+    type = "bar"
+  ) %>%
+    layout(
+      xaxis = list(title = lvl),
+      yaxis = list(title = numcol)
+    )
+}
+Bar_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD', aggfun = mean) {
+  df_summary = df %>%
+    group_by(across(all_of(c(lvl, subLvl)))) %>%
+    summarise(Value = aggfun(.data[[numcol]]), .groups = "drop")
+  plot_ly(
+    data = df_summary,
+    x = ~get(lvl),
+    y = ~Value,
+    color = ~get(subLvl),
+    type = "bar"
+  ) %>%
+    layout(
+      xaxis = list(title = lvl),
+      yaxis = list(title = numcol),
+      barmode = 'group')
 }
 Stacked_Histogram(data_salaries_2024_FTonly, 'Field')
 Stacked_Histogram(data_salaries_2024_FTonly, 'Experience_Level')
@@ -336,3 +406,29 @@ Box_2Lvl(data_salaries_2024, 'Experience_Level', 'Work_Time_Arrangement')
 Box_2Lvl(data_salaries_2024, 'Work_Office_Arrangement', 'Work_Time_Arrangement')
 Box_2Lvl(data_salaries_2024_FTonly, 'Continent', 'Company_Size')
 Box_2Lvl(data_salaries_2024_FTonly, 'USA', 'Company_Size')
+Violin_1Lvl(data_salaries_2024_FTonly, 'Field')
+Violin_1Lvl(data_salaries_2024_FTonly, 'Experience_Level')
+Violin_1Lvl(data_salaries_2024, 'Work_Time_Arrangement')
+Violin_1Lvl(data_salaries_2024_FTonly, 'Company_Size')
+Violin_1Lvl(data_salaries_2024_FTonly, 'USA')
+Violin_1Lvl(data_salaries_2024_FTonly, 'Continent')
+Violin_1Lvl(data_salaries_2024_FTonly, 'International')
+Violin_2Lvl(data_salaries_2024_FTonly, 'Field', 'Experience_Level')
+Violin_2Lvl(data_salaries_2024, 'Field', 'Work_Time_Arrangement')
+Violin_2Lvl(data_salaries_2024, 'Experience_Level', 'Work_Time_Arrangement')
+Violin_2Lvl(data_salaries_2024, 'Work_Office_Arrangement', 'Work_Time_Arrangement')
+Violin_2Lvl(data_salaries_2024_FTonly, 'Continent', 'Company_Size')
+Violin_2Lvl(data_salaries_2024_FTonly, 'USA', 'Company_Size')
+Bar_1Lvl(data_salaries_2024_FTonly, 'Field')
+Bar_1Lvl(data_salaries_2024_FTonly, 'Experience_Level')
+Bar_1Lvl(data_salaries_2024, 'Work_Time_Arrangement')
+Bar_1Lvl(data_salaries_2024_FTonly, 'Company_Size')
+Bar_1Lvl(data_salaries_2024_FTonly, 'USA')
+Bar_1Lvl(data_salaries_2024_FTonly, 'Continent')
+Bar_1Lvl(data_salaries_2024_FTonly, 'International')
+Bar_2Lvl(data_salaries_2024_FTonly, 'Field', 'Experience_Level')
+Bar_2Lvl(data_salaries_2024, 'Field', 'Work_Time_Arrangement')
+Bar_2Lvl(data_salaries_2024, 'Experience_Level', 'Work_Time_Arrangement')
+Bar_2Lvl(data_salaries_2024, 'Work_Office_Arrangement', 'Work_Time_Arrangement')
+Bar_2Lvl(data_salaries_2024_FTonly, 'Continent', 'Company_Size')
+Bar_2Lvl(data_salaries_2024_FTonly, 'USA', 'Company_Size')
