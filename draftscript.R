@@ -386,6 +386,79 @@ Bar_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD', aggfun = mean) {
       yaxis = list(title = numcol),
       barmode = 'group')
 }
+Pie_1Lvl_Gradient = function(df_summary, lvl, numcol = 'Avg_Salary_USD') {
+  viridis = c(
+    "#440154", "#482777", "#3E4989", "#31688E", "#26828E",
+    "#1F9E89", "#35B779", "#6DCD59", "#B4DE2C", "#FDE725"
+  )
+  colors = colorRampPalette(viridis)(nrow(df_summary))[rank(df_summary[[numcol]])]
+  plot_ly(
+    data = df_summary,
+    labels = ~get(lvl),
+    values = ~Count,
+    type = "pie",
+    marker = list(colors = colors)
+  ) %>%
+    layout(
+      title = deparse(substitute(df_summary))
+    )
+}
+Pie_1Lvl = function(df_summary, lvl) {
+  plot_ly(
+    data = df_summary,
+    labels = ~get(lvl),
+    values = ~Count,
+    type = "pie"
+  ) %>%
+    layout(
+      title = paste("% of Jobs by", lvl)
+    )
+}
+Sunburst_2Lvl = function(df_summary, lvl, sublvl, numcol = 'Percentage') {
+  df_summary = df_summary %>%
+    rename(Level = all_of(lvl),
+           SubLevel = all_of(sublvl),
+           Value = all_of(numcol)) %>%
+    mutate(
+      Level = as.character(Level),
+      SubLevel = as.character(SubLevel)
+    )
+  root_node = tibble(
+    labels = 'Total',
+    parents = '',
+    values = sum(df_summary$Value, na.rm = TRUE)
+  )
+  df_lvl = df_summary %>%
+    group_by(Level) %>%
+    summarise(values = sum(Value, na.rm = TRUE), .groups = 'drop') %>%
+    transmute(
+      labels = Level,
+      parents = 'Total',
+      values
+    )
+  df_sublvl = df_summary %>%
+    transmute(
+      labels = SubLevel,
+      parents = Level,
+      values = Value
+    )
+  df_sunburst = bind_rows(root_node, df_lvl, df_sublvl)
+  plot_ly(
+    data = df_sunburst,
+    labels = ~labels,
+    parents = ~parents,
+    values = ~values,
+    type = 'sunburst',
+    branchvalues = 'total'
+  ) %>% layout(title = paste("% of rows by", lvl, sublvl))
+}
+Mosaic_2Lvl = function(df, lvl, sublvl) {
+  mosaicplot(
+    table(df[[lvl]], df[[sublvl]]),
+    shade = TRUE,
+    main = paste(lvl, sublvl)
+  )
+}
 Stacked_Histogram(data_salaries_2024_FTonly, 'Field')
 Stacked_Histogram(data_salaries_2024_FTonly, 'Experience_Level')
 Stacked_Histogram(data_salaries_2024, 'Work_Time_Arrangement')
@@ -432,3 +505,22 @@ Bar_2Lvl(data_salaries_2024, 'Experience_Level', 'Work_Time_Arrangement')
 Bar_2Lvl(data_salaries_2024, 'Work_Office_Arrangement', 'Work_Time_Arrangement')
 Bar_2Lvl(data_salaries_2024_FTonly, 'Continent', 'Company_Size')
 Bar_2Lvl(data_salaries_2024_FTonly, 'USA', 'Company_Size')
+Pie_1Lvl(Field_Summary, 'Field')
+Pie_1Lvl(Experience_Level_Summary, 'Experience_Level')
+Pie_1Lvl(Work_Time_Arrangement_Summary, 'Work_Time_Arrangement')
+Pie_1Lvl(Company_Size_Summary, 'Company_Size')
+Pie_1Lvl(USA_Summary, 'USA')
+Pie_1Lvl(Continent_Summary, 'Continent')
+Pie_1Lvl(International_Summary, 'International')
+Sunburst_2Lvl(Field_Experience_Summary, 'Field', 'Experience_Level')
+Sunburst_2Lvl(Field_Time_Arrangement_Summary, 'Field', 'Work_Time_Arrangement')
+Sunburst_2Lvl(Experience_Time_Arrangement_Summary, 'Experience_Level', 'Work_Time_Arrangement')
+Sunburst_2Lvl(Office_Time_Arrangement_Summary, 'Work_Office_Arrangement', 'Work_Time_Arrangement')
+Sunburst_2Lvl(Company_Continent_Size_Summary, 'Continent', 'Company_Size')
+Sunburst_2Lvl(Company_USA_Size_Summary, 'USA', 'Company_Size')
+Mosaic_2Lvl(data_salaries_2024_FTonly, 'Field', 'Experience_Level')
+Mosaic_2Lvl(data_salaries_2024, 'Field', 'Work_Time_Arrangement')
+Mosaic_2Lvl(data_salaries_2024, 'Experience_Level', 'Work_Time_Arrangement')
+Mosaic_2Lvl(data_salaries_2024, 'Work_Office_Arrangement', 'Work_Time_Arrangement')
+Mosaic_2Lvl(data_salaries_2024_FTonly, 'Continent', 'Company_Size')
+Mosaic_2Lvl(data_salaries_2024_FTonly, 'USA', 'Company_Size')
