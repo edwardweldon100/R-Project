@@ -87,6 +87,8 @@ data_salaries = data_salaries %>%
 yearly_job_count = data_salaries %>% 
      count(Work_Year, name = "Count")
 yearly_job_count
+data_salaries_FTonly = data_salaries %>% filter(Work_Time_Arrangement == 'Full-time') %>%
+  arrange(desc(Salary_USD))
 data_salaries_2024 = data_salaries %>% filter(Work_Year == 2024) %>%
   arrange(desc(Salary_USD))
 data_salaries_2024_FTonly = data_salaries_2024 %>% filter(Work_Time_Arrangement == 'Full-time')
@@ -386,6 +388,41 @@ Bar_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD', aggfun = mean) {
       yaxis = list(title = numcol),
       barmode = 'group')
 }
+Bar_Trend_Salary = function(df, subLvl, numcol = 'Salary_USD', aggfun = mean) {
+  df_summary = df %>%
+    group_by(across(all_of(c('Work_Year', subLvl)))) %>%
+    summarise(Value = aggfun(.data[[numcol]]), .groups = "drop")
+  plot_ly(
+    data = df_summary,
+    x = ~Work_Year,
+    y = ~Value,
+    color = ~get(subLvl),
+    type = "bar"
+  ) %>%
+    layout(
+      xaxis = list(title = paste('Pay Trend by', subLvl)),
+      yaxis = list(title = numcol),
+      barmode = 'group'
+    )
+}
+Bar_Trend_Count = function(df, subLvl) {
+  df_summary = df %>%
+    group_by(across(all_of(c('Work_Year', subLvl)))) %>%
+    summarise(Value = n(), .groups = "drop")
+  
+  plot_ly(
+    data = df_summary,
+    x = ~Work_Year,
+    y = ~Value,
+    color = ~get(subLvl),
+    type = "bar"
+  ) %>%
+    layout(
+      xaxis = list(title = paste('Job Count Trend by', subLvl)),
+      yaxis = list(title = 'Job Count'),
+      barmode = 'group'
+    )
+}
 Pie_1Lvl_Gradient = function(df_summary, lvl, numcol = 'Avg_Salary_USD') {
   viridis = c(
     "#440154", "#482777", "#3E4989", "#31688E", "#26828E",
@@ -505,6 +542,22 @@ Bar_2Lvl(data_salaries_2024, 'Experience_Level', 'Work_Time_Arrangement')
 Bar_2Lvl(data_salaries_2024, 'Work_Office_Arrangement', 'Work_Time_Arrangement')
 Bar_2Lvl(data_salaries_2024_FTonly, 'Continent', 'Company_Size')
 Bar_2Lvl(data_salaries_2024_FTonly, 'USA', 'Company_Size')
+Bar_Trend_Salary(data_salaries_FTonly, 'Work_Year')
+Bar_Trend_Count(data_salaries_FTonly, 'Work_Year')
+Bar_Trend_Salary(data_salaries_FTonly, 'Field')
+Bar_Trend_Count(data_salaries_FTonly, 'Field')
+Bar_Trend_Salary(data_salaries_FTonly, 'Experience_Level')
+Bar_Trend_Count(data_salaries_FTonly, 'Experience_Level')
+Bar_Trend_Salary(data_salaries, 'Work_Time_Arrangement')
+Bar_Trend_Count(data_salaries, 'Work_Time_Arrangement')
+Bar_Trend_Salary(data_salaries_FTonly, 'Company_Size')
+Bar_Trend_Count(data_salaries_FTonly, 'Company_Size')
+Bar_Trend_Salary(data_salaries_FTonly, 'USA')
+Bar_Trend_Count(data_salaries_FTonly, 'USA')
+Bar_Trend_Salary(data_salaries_FTonly, 'Continent')
+Bar_Trend_Count(data_salaries_FTonly, 'Continent')
+Bar_Trend_Salary(data_salaries_FTonly, 'International')
+Bar_Trend_Count(data_salaries_FTonly, 'International')
 Pie_1Lvl(Field_Summary, 'Field')
 Pie_1Lvl(Experience_Level_Summary, 'Experience_Level')
 Pie_1Lvl(Work_Time_Arrangement_Summary, 'Work_Time_Arrangement')
