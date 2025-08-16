@@ -42,7 +42,7 @@ data_salaries = data_salaries %>%
       ifelse(Employment_Type == 'PT', 'Part-time',
              ifelse(Employment_Type == 'FT', 'Full-time', 
                     ifelse(Employment_Type == 'CT', 'Contract', 'Freelance'))),
-      levels = c('Part-time', 'Full-time', 'Contract', 'Freelance')),
+      levels = c('Full-time', 'Part-time', 'Contract', 'Freelance')),
     Work_Office_Arrangement = factor(
       ifelse(Remote_Ratio == 100, 'Remote',
              ifelse(Remote_Ratio == 50, 'Hybrid', 'In-Person')),
@@ -95,6 +95,9 @@ data_salaries_2024_FTonly = data_salaries_2024 %>% filter(Work_Time_Arrangement 
 data_salaries_2024_select = data_salaries_2024 %>% filter(Work_Time_Arrangement == 'Full-time') %>% 
   select(Field, Job_Title, Experience_Level, Work_Time_Arrangement, Work_Office_Arrangement, Company_Size, USA, Continent, Company_Location_Name, Company_Location_Code3, International, Salary_USD)
 data_salaries_2024_select_asc = data_salaries_2024_select %>% arrange(Salary_USD)
+data_salaries_shiny = data_salaries %>% 
+  select(Work_Year, Field, Job_Title, Experience_Level, Work_Time_Arrangement, Work_Office_Arrangement, Company_Size, Continent, Company_Location_Name, , Company_Location_Code3, Salary_USD)
+write.csv(data_salaries_shiny, file='Data Salaries- Shiny.csv', row.names=F)
 Total_Count_2024 = nrow(data_salaries_2024)
 FX_Rates_2024 = data_salaries_2024 %>%
   group_by(Salary_Currency) %>%
@@ -121,6 +124,7 @@ Summarise_Salary = function(df, group_cols) {
     ) %>%
     arrange(desc(Avg_Salary_USD))
 }
+FX_Rates_2024
 Field_Summary = Summarise_Salary(data_salaries_2024_FTonly, 'Field')
 Field_Title_Summary = Summarise_Salary(data_salaries_2024_FTonly, c('Field', 'Job_Title'))
 Experience_Level_Summary = Summarise_Salary(data_salaries_2024_FTonly, 'Experience_Level')
