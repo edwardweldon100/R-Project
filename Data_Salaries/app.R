@@ -3,36 +3,38 @@ library(dplyr)
 library(plotly)
 
 data = read.csv("data/Data Salaries- Shiny.csv", stringsAsFactors = FALSE)
+data_2024 = data %>% filter(Work_Year == 2024)
 
-fields = sort(unique(data$Field))
-exp_lvls = sort(unique(data$Experience_Level))
-titles = sort(unique(data$Job_Title))
-times = sort(unique(data$Work_Time_Arrangement))
-office_arrangements = sort(unique(data$Work_Office_Arrangement))
-continents = sort(unique(data$Continent))
-countries = sort(unique(data$Company_Location_Name))
-sizes = sort(unique(data$Company_Size))
-
-#Plot Functions
-Bar_Trend_Salary = function(df, subLvl, numcol = 'Salary_USD', aggfun = mean) {
-  df_summary = df %>%
-    group_by(across(all_of(c('Work_Year', subLvl)))) %>%
-    summarise(Value = aggfun(.data[[numcol]]), .groups = "drop")
-  
-  plot_ly(
-    data = df_summary,
-    x = ~Work_Year,
-    y = ~Value,
-    color = ~get(subLvl),
-    type = "bar"
-  ) %>%
-    layout(
-      xaxis = list(title = paste('Pay Trend by', subLvl)),
-      yaxis = list(title = numcol),
-      barmode = 'group'
-    )
+factor_mutation = function(df) {
+  df %>% mutate(
+    Field = factor(Field,
+                   levels = c('Data Engineering', 'Data Science', 'Data Analysis', 'Business Intelligence', 'Machine Learning', 
+                              'Artificial Intelligence   (general)', 'Software Development   (general)', 'Research & Development   (general)')),
+    Experience_Level = factor(Experience_Level,
+                              levels = c('Entry', 'Mid', 'Senior', 'Executive')),
+    Work_Time_Arrangement = factor(Work_Time_Arrangement,
+                                   levels = c('Full-time', 'Part-time', 'Contract', 'Freelance')),
+    Work_Office_Arrangement = factor(Work_Office_Arrangement,
+                                     levels = c('In-Person', 'Hybrid', 'Remote')),
+    Continent = factor(Continent,
+                       levels = c('Americas', 'Europe', 'Oceania', 'Asia', 'Africa')),
+    Company_Size = factor(Company_Size,
+                          levels = c('S', 'M', 'L'))
+  )
 }
 
+data_2024 = factor_mutation(data_2024)
+
+fields = levels(data_2024$Field)
+exp_lvls = levels(data_2024$Experience_Level)
+titles = sort(unique(data_2024$Job_Title))
+times = levels(data_2024$Work_Time_Arrangement)
+office_arrangements = levels(data_2024$Work_Office_Arrangement)
+continents = levels(data_2024$Continent)
+countries = sort(unique(data_2024$Company_Location_Name))
+sizes = levels(data_2024$Company_Size)
+
+#Plot Functions
 World_Map_by_Salary = function(df) {
   plot_ly(
     data = df,
@@ -53,48 +55,84 @@ World_Map_by_Salary = function(df) {
       )
     )
 }
-
+Bar_Trend_Salary = function(df, numcol = 'Salary_USD', aggfun = mean) {
+  df_summary = df %>%
+    group_by(Work_Year) %>%
+    summarise(Value = aggfun(.data[[numcol]], na.rm = TRUE), .groups = "drop")
+  
+  plot_ly(
+    data = df_summary,
+    x = ~Work_Year,
+    y = ~Value,
+    color = ~as.factor(Work_Year),
+    type = "bar"
+  ) %>%
+    layout(
+      xaxis = list(title = "Pay Trend"),
+      yaxis = list(title = numcol),
+      barmode = 'group'
+    )
+}
+Bar_Trend_Salary_Sub = function(df, subLvl, numcol = 'Salary_USD', aggfun = mean) {
+  df_summary = df %>%
+    group_by(across(all_of(c('Work_Year', subLvl)))) %>%
+    summarise(Value = aggfun(.data[[numcol]]), .groups = "drop")
+  
+  plot_ly(
+    data = df_summary,
+    x = ~Work_Year,
+    y = ~Value,
+    color = ~get(subLvl),
+    type = "bar"
+  ) %>%
+    layout(
+      xaxis = list(title = paste('Pay Trend by', subLvl)),
+      yaxis = list(title = numcol),
+      barmode = 'group'
+    )
+}
 ui = fluidPage(
   
   tags$head(
     tags$style(HTML("
-#Title Panel
+      /* Title panel bold and blue */
       .my-title-panel {
-        background-color: blue
+        background-color: darkblue;
         font-weight: bold;
         color: white;
         padding: 15px;
         text-align: left;
         font-size: 40px;
       }
-#Tabs
+
+      /* Tabs */
       .nav-tabs > li > a {
         background-color: orange !important;
         color: black !important;
         font-weight: bold;
       }
       .nav-tabs > li[class=active] > a {
-        background-color: orange !important;
+        background-color: darkorange !important;
         color: black !important;
       }
 
-#SideBar
+      /* Sidebar */
       .well {
-        background-color: orange !important;
+        background-color: darkorange !important;
         color: black !important;
       }
       .well label {
         font-weight: bold;
       }
 
-#Plotly height adjustments
+      /* Plotly full height */
       .plotly {
         height: calc(100vh - 200px) !important;
       }
 
-#Body Background
+      /* Body background blue to match title panel */
       body {
-        background-color: blue;
+        background-color: darkblue;
       }
     "))
   ),
@@ -103,7 +141,7 @@ ui = fluidPage(
   
   tabsetPanel(
     #Tab 1- Histogram
-    tabPanel("Salary Histogram",
+    tabPanel("Histogram",
              sidebarLayout(
                sidebarPanel(
                  fluidRow(column(6, actionButton("select_all_Field", "Select All")),
@@ -142,21 +180,26 @@ ui = fluidPage(
              )
     ),
     
-    #Tab 2- Annual Trend
+    #Tab 2- World Map
+    tabPanel("World Map",
+             mainPanel(plotlyOutput("world_map_plot", height = "1200px"))
+    ),
+    
+    #Tab 3- Annual Trend
     tabPanel("Annual Trend",
+             mainPanel(plotlyOutput("annual_trend_plot", height = "800px"))
+    ),
+    
+    #Tab 4- Annual Trend- Sub Plots
+    tabPanel("Annual Trend- Sub Plots",
              sidebarLayout(
                sidebarPanel(
                  selectInput("trend_subLvl", "Color By", 
                              choices = c("Field", "Job_Title", "Experience_Level", "Company_Size"), 
                              selected = "Job_Title")
                ),
-               mainPanel(plotlyOutput("annual_trend_plot", height = "800px"))
+               mainPanel(plotlyOutput("annual_trend_plot_sub", height = "800px"))
              )
-    ),
-    
-    #Tab 3- World Map
-    tabPanel("World Map",
-             mainPanel(plotlyOutput("world_map_plot", height = "1200px"))
     )
   )
 )
@@ -190,7 +233,7 @@ server = function(input, output, session) {
   
   #Data Filters
   filtered_data = reactive({
-    df = data
+    df = factor_mutation(data)
     if (!is.null(input$Field) && length(input$Field) > 0) df = df %>% filter(Field %in% input$Field)
     if (!is.null(input$Job_Title) && length(input$Job_Title) > 0) df = df %>% filter(Job_Title %in% input$Job_Title)
     if (!is.null(input$Experience_Level) && length(input$Experience_Level) > 0) df = df %>% filter(Experience_Level %in% input$Experience_Level)
@@ -201,10 +244,11 @@ server = function(input, output, session) {
     if (!is.null(input$Company_Size) && length(input$Company_Size) > 0) df = df %>% filter(Company_Size %in% input$Company_Size)
     df
   })
+  filtered_data_2024 = reactive({filtered_data() %>% filter(Work_Year == 2024)})
   
   #Histogram
   output$salary_plot = renderPlotly({
-    df = filtered_data()
+    df = filtered_data_2024()
     if (nrow(df) == 0) return(NULL)
     
     plot_ly(df, x = ~Salary_USD) %>%
@@ -234,12 +278,19 @@ server = function(input, output, session) {
   #Annual Trend
   output$annual_trend_plot = renderPlotly({
     df = filtered_data()
-    Bar_Trend_Salary(df, input$trend_subLvl)
+    Bar_Trend_Salary(df)
+  })
+  
+  
+  #Annual Trend- Sub Plot
+  output$annual_trend_plot_sub = renderPlotly({
+    df = filtered_data()
+    Bar_Trend_Salary_Sub(df, input$trend_subLvl)
   })
   
   #World Map
   output$world_map_plot = renderPlotly({
-    df = filtered_data()
+    df = filtered_data_2024()
     if (nrow(df) == 0) return(NULL)
     
     df_summary = df %>%
