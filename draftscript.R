@@ -332,31 +332,33 @@ Box_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
 Violin_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
   plot_ly(
     data = df,
-    x = ~get(lvl),
-    y = ~get(numcol),
+    x = ~get(numcol),
+    y = ~get(lvl),
     split = ~get(lvl),
     type = 'violin',
     box = list(visible = TRUE),
-    meanline = list(visible = TRUE)
+    meanline = list(visible = TRUE),
+    orientation = 'h'
   ) %>%
     layout(
-      xaxis = list(title = lvl),
-      yaxis = list(title = numcol, zeroline = FALSE)
+      xaxis = list(title = numcol, zeroline = FALSE),
+      yaxis = list(title = lvl)
     )
 }
 Violin_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
   plot_ly(
     data = df,
-    x = ~get(lvl),
-    y = ~get(numcol),
+    x = ~get(numcol),
+    y = ~get(lvl),
     color = ~get(subLvl),
     type = "violin",
     box = list(visible = TRUE),
-    meanline = list(visible = TRUE)
+    meanline = list(visible = TRUE),
+    orientation = 'h'
   ) %>%
     layout(
-      xaxis = list(title = lvl),
-      yaxis = list(title = numcol, zeroline = FALSE),
+      xaxis = list(title = numcol, zeroline = FALSE),
+      yaxis = list(title = lvl),
       violinmode = "group"
     )
 }
@@ -497,7 +499,11 @@ Mosaic_2Lvl = function(df, lvl, sublvl) {
   mosaicplot(
     table(df[[lvl]], df[[sublvl]]),
     shade = TRUE,
-    main = paste(lvl, sublvl)
+    main = paste(lvl, sublvl),
+    xlab = lvl,
+    ylab = sublvl,
+    las = 2,
+    cex.axis = 0.9
   )
 }
 Stacked_Histogram(data_salaries_2024_FTonly, 'Field')
