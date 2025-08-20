@@ -8,16 +8,16 @@ head(data_salaries)
 data_salaries[!complete.cases(data_salaries), ]
 names(data_salaries)[colSums(is.na(data_salaries)) > 0]
 colnames(data_salaries) = colnames(data_salaries) |>
-     str_replace_all("_", " ") |>
-     str_to_title() |> 
-     str_replace_all(" ", "_")
-colnames(data_salaries)[which(names(data_salaries) == "Salary")] = "Salary_LOC"
-colnames(data_salaries)[which(names(data_salaries) == "Salary_In_Usd")] = "Salary_USD"
-colnames(data_salaries)[which(names(data_salaries) == "Employee_Residence")] = "Employee_Residence_Code"
-colnames(data_salaries)[which(names(data_salaries) == "Company_Location")] = "Company_Location_Code"
-colnames(data_salaries)[which(names(data_salaries) == "Experience_Level")] = "Experience_Level_Code"
+  str_replace_all('_', ' ') |>
+  str_to_title() |> 
+  str_replace_all(' ', '_')
+colnames(data_salaries)[which(names(data_salaries) == 'Salary')] = 'Salary_LOC'
+colnames(data_salaries)[which(names(data_salaries) == 'Salary_In_Usd')] = 'Salary_USD'
+colnames(data_salaries)[which(names(data_salaries) == 'Employee_Residence')] = 'Employee_Residence_Code'
+colnames(data_salaries)[which(names(data_salaries) == 'Company_Location')] = 'Company_Location_Code'
+colnames(data_salaries)[which(names(data_salaries) == 'Experience_Level')] = 'Experience_Level_Code'
 data_salaries$Company_Size = factor(data_salaries$Company_Size, 
-                    levels = c('S', 'M', 'L'))
+                                    levels = c('S', 'M', 'L'))
 country_codes_legend = read.csv('continents2.csv')
 field_title_legend = read.csv('data_field_title_legend.csv')
 country_name_lookup = function(code) {
@@ -85,7 +85,7 @@ data_salaries = data_salaries %>%
     Salary_USD
   )
 yearly_job_count = data_salaries %>% 
-     count(Work_Year, name = "Count")
+  count(Work_Year, name = 'Count')
 yearly_job_count
 data_salaries_FTonly = data_salaries %>% filter(Work_Time_Arrangement == 'Full-time') %>%
   arrange(desc(Salary_USD))
@@ -151,12 +151,12 @@ International_by_Location_Summary_asc = International_by_Location_Summary %>% ar
 formattable(
   head(data_salaries_2024_select,10),
   list(
-    Salary_USD = formatter("span",
+    Salary_USD = formatter('span',
                            style = x ~ list(
-                             display = "block",
-                             padding = "0 4px",
-                             `border-radius` = "4px",
-                             `background-color` = csscolor(gradient(as.numeric(x), "white", "lightblue"))
+                             display = 'block',
+                             padding = '0 4px',
+                             `border-radius` = '4px',
+                             `background-color` = csscolor(gradient(as.numeric(x), 'white', 'lightblue'))
                            ),
                            format = x ~ comma(as.numeric(x), accuracy = 1)
     )
@@ -165,12 +165,12 @@ formattable(
 formattable(
   head(data_salaries_2024_select_asc,10),
   list(
-    Salary_USD = formatter("span",
+    Salary_USD = formatter('span',
                            style = x ~ list(
-                             display = "block",
-                             padding = "0 4px",
-                             `border-radius` = "4px",
-                             `background-color` = csscolor(gradient(as.numeric(x), "white", "lightblue"))
+                             display = 'block',
+                             padding = '0 4px',
+                             `border-radius` = '4px',
+                             `background-color` = csscolor(gradient(as.numeric(x), 'white', 'lightblue'))
                            ),
                            format = x ~ comma(as.numeric(x), accuracy = 1)
     )
@@ -181,30 +181,30 @@ Pay_Summary_by = function(df) {
     df,
     list(
       Avg_Salary_USD = formatter(
-        "span",
+        'span',
         style = x ~ style(
-          display = "block",
-          padding = "0 4px",
-          `border-radius` = "4px",
+          display = 'block',
+          padding = '0 4px',
+          `border-radius` = '4px',
           `background-color` = csscolor(
-            gradient(as.numeric(x), "white", "lightblue")
+            gradient(as.numeric(x), 'white', 'lightblue')
           )
         ),
         x ~ comma(x, accuracy = 1)
       ),
       Count = formatter(
-        "span",
+        'span',
         style = x ~ style(
-          display = "block",
-          padding = "0 4px"
+          display = 'block',
+          padding = '0 4px'
         ),
         x ~ comma(x, accuracy = 1)
       ),
       Percentage = formatter(
-        "span",
+        'span',
         style = x ~ style(
-          display = "block",
-          padding = "0 4px"
+          display = 'block',
+          padding = '0 4px'
         ),
         x ~ percent(x / 100, accuracy = 0.01)
       )
@@ -212,7 +212,7 @@ Pay_Summary_by = function(df) {
   )
 }
 Top10_Pay_Summary_by = function(df) {
- Pay_Summary_by(head(df, 10))
+  Pay_Summary_by(head(df, 10))
 }
 Pay_Summary_by(Experience_Level_Summary)
 Pay_Summary_by(Work_Time_Arrangement_Summary)
@@ -241,7 +241,7 @@ World_Map_by_Salary = plot_ly(
   locations = ~Company_Location_Code3,
   z = ~Avg_Salary_USD,
   text = ~Company_Location_Name,
-  colorscale = "Blues",
+  colorscale = 'Blues',
   reversescale = TRUE,
   locationmode = 'ISO-3'
 ) %>%
@@ -260,7 +260,7 @@ World_Map_by_Job_Count = plot_ly(
   locations = ~Company_Location_Code3,
   z = ~Count,
   text = ~Company_Location_Name,
-  colorscale = "Oranges",
+  colorscale = 'Oranges',
   reversescale = FALSE,
   locationmode = 'ISO-3'
 ) %>%
@@ -274,7 +274,7 @@ World_Map_by_Job_Count = plot_ly(
   )
 World_Map_by_Job_Count
 Data_Salary_Overall_Histogram = plot_ly(data_salaries_2024_select, x = ~Salary_USD) %>%
-  add_histogram(name = "Overall FT Salary Distribution", nbinsx = 50, opacity = 1) %>%
+  add_histogram(name = 'Overall FT Salary Distribution', nbinsx = 50, opacity = 1) %>%
   add_trace(
     x = ~sort(Salary_USD),
     y = ~ecdf(Salary_USD)(sort(Salary_USD)),
@@ -284,13 +284,13 @@ Data_Salary_Overall_Histogram = plot_ly(data_salaries_2024_select, x = ~Salary_U
     yaxis = 'y2'
   ) %>%
   layout(
-    title = "FT Salary Distribution with ECDF",
-    xaxis = list(title = "Salary (USD)"),
-    yaxis = list(title = "Count"),
+    title = 'FT Salary Distribution with ECDF',
+    xaxis = list(title = 'Salary (USD)'),
+    yaxis = list(title = 'Count'),
     yaxis2 = list(
-      title = "ECDF",
-      overlaying = "y",
-      side = "right",
+      title = 'ECDF',
+      overlaying = 'y',
+      side = 'right',
       range = c(0,1)
     ),
     bargap = 0.01
@@ -301,14 +301,14 @@ Stacked_Histogram = function(df, catcol, numcol = 'Salary_USD') {
     data = df,
     x = ~.data[[numcol]],
     color = ~.data[[catcol]],
-    type = "histogram",
+    type = 'histogram',
     opacity = .7
   ) %>%
     layout(
       title = paste(catcol, 'Salary Distribution'),
       xaxis = list(title = 'Salary (USD)'),
       yaxis = list(title = 'Count'),
-      barmode = "overlay"
+      barmode = 'overlay'
     )
 }
 Box_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
@@ -316,7 +316,7 @@ Box_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
     data = df,
     y = ~get(numcol),
     color = ~get(lvl),
-    type = "box"
+    type = 'box'
   )
 }
 Box_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
@@ -325,9 +325,9 @@ Box_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
     x = ~get(lvl),
     y = ~get(numcol),
     color = ~get(subLvl),
-    type = "box"
+    type = 'box'
   ) %>%
-    layout(boxmode = "group")  # Side-by-side grouping
+    layout(boxmode = 'group')  # Side-by-side grouping
 }
 Violin_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
   plot_ly(
@@ -351,7 +351,7 @@ Violin_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
     x = ~get(numcol),
     y = ~get(lvl),
     color = ~get(subLvl),
-    type = "violin",
+    type = 'violin',
     box = list(visible = TRUE),
     meanline = list(visible = TRUE),
     orientation = 'h'
@@ -359,19 +359,19 @@ Violin_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
     layout(
       xaxis = list(title = numcol, zeroline = FALSE),
       yaxis = list(title = lvl),
-      violinmode = "group"
+      violinmode = 'group'
     )
 }
 Bar_1Lvl = function(df, lvl, numcol = 'Salary_USD', aggfun = mean) {
   df_summary = df %>%
     group_by(across(all_of(lvl))) %>%
-    summarise(Value = aggfun(.data[[numcol]]), .groups = "drop")
+    summarise(Value = aggfun(.data[[numcol]]), .groups = 'drop')
   plot_ly(
     data = df_summary,
     x = ~get(lvl),
     y = ~Value,
     color = ~get(lvl),
-    type = "bar"
+    type = 'bar'
   ) %>%
     layout(
       xaxis = list(title = lvl),
@@ -381,13 +381,13 @@ Bar_1Lvl = function(df, lvl, numcol = 'Salary_USD', aggfun = mean) {
 Bar_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD', aggfun = mean) {
   df_summary = df %>%
     group_by(across(all_of(c(lvl, subLvl)))) %>%
-    summarise(Value = aggfun(.data[[numcol]]), .groups = "drop")
+    summarise(Value = aggfun(.data[[numcol]]), .groups = 'drop')
   plot_ly(
     data = df_summary,
     x = ~get(lvl),
     y = ~Value,
     color = ~get(subLvl),
-    type = "bar"
+    type = 'bar'
   ) %>%
     layout(
       xaxis = list(title = lvl),
@@ -397,13 +397,13 @@ Bar_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD', aggfun = mean) {
 Bar_Trend_Salary = function(df, subLvl, numcol = 'Salary_USD', aggfun = mean) {
   df_summary = df %>%
     group_by(across(all_of(c('Work_Year', subLvl)))) %>%
-    summarise(Value = aggfun(.data[[numcol]]), .groups = "drop")
+    summarise(Value = aggfun(.data[[numcol]]), .groups = 'drop')
   plot_ly(
     data = df_summary,
     x = ~Work_Year,
     y = ~Value,
     color = ~get(subLvl),
-    type = "bar"
+    type = 'bar'
   ) %>%
     layout(
       xaxis = list(title = paste('Pay Trend by', subLvl)),
@@ -414,14 +414,14 @@ Bar_Trend_Salary = function(df, subLvl, numcol = 'Salary_USD', aggfun = mean) {
 Bar_Trend_Count = function(df, subLvl) {
   df_summary = df %>%
     group_by(across(all_of(c('Work_Year', subLvl)))) %>%
-    summarise(Value = n(), .groups = "drop")
+    summarise(Value = n(), .groups = 'drop')
   
   plot_ly(
     data = df_summary,
     x = ~Work_Year,
     y = ~Value,
     color = ~get(subLvl),
-    type = "bar"
+    type = 'bar'
   ) %>%
     layout(
       xaxis = list(title = paste('Job Count Trend by', subLvl)),
@@ -431,15 +431,15 @@ Bar_Trend_Count = function(df, subLvl) {
 }
 Pie_1Lvl_Gradient = function(df_summary, lvl, numcol = 'Avg_Salary_USD') {
   viridis = c(
-    "#440154", "#482777", "#3E4989", "#31688E", "#26828E",
-    "#1F9E89", "#35B779", "#6DCD59", "#B4DE2C", "#FDE725"
+    '#440154', '#482777', '#3E4989', '#31688E', '#26828E',
+    '#1F9E89', '#35B779', '#6DCD59', '#B4DE2C', '#FDE725'
   )
   colors = colorRampPalette(viridis)(nrow(df_summary))[rank(df_summary[[numcol]])]
   plot_ly(
     data = df_summary,
     labels = ~get(lvl),
     values = ~Count,
-    type = "pie",
+    type = 'pie',
     marker = list(colors = colors)
   ) %>%
     layout(
@@ -451,10 +451,10 @@ Pie_1Lvl = function(df_summary, lvl) {
     data = df_summary,
     labels = ~get(lvl),
     values = ~Count,
-    type = "pie"
+    type = 'pie'
   ) %>%
     layout(
-      title = paste("% of Jobs by", lvl)
+      title = paste('% of Jobs by', lvl)
     )
 }
 Sunburst_2Lvl = function(df_summary, lvl, sublvl, numcol = 'Percentage') {
@@ -493,7 +493,7 @@ Sunburst_2Lvl = function(df_summary, lvl, sublvl, numcol = 'Percentage') {
     values = ~values,
     type = 'sunburst',
     branchvalues = 'total'
-  ) %>% layout(title = paste("% of rows by", lvl, sublvl))
+  ) %>% layout(title = paste('% of rows by', lvl, sublvl))
 }
 Mosaic_2Lvl = function(df, lvl, sublvl) {
   mosaicplot(

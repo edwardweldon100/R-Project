@@ -60,9 +60,9 @@ Histogram_ECDF = function(df) {
     )
 }
 
-Violin_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
+Violin_2lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
   if (is.null(subLvl) || subLvl == 'NULL') {
-    p = plot_ly(
+    plt = plot_ly(
       data = df,
       x = ~get(numcol),
       y = ~get(lvl),
@@ -73,7 +73,7 @@ Violin_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
       orientation = 'h'
     )
   } else {
-    p = plot_ly(
+    plt = plot_ly(
       data = df,
       x = ~get(numcol),
       y = ~get(lvl),
@@ -85,11 +85,82 @@ Violin_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
     )
   }
   
-  p %>% layout(
-    xaxis = list(title = numcol, zeroline = FALSE),
+  plt %>% layout(
+    xaxis = list(title = 'Salary USD', zeroline = TRUE, range = c(0, max(df[[numcol]], na.rm = TRUE))),
     yaxis = list(title = lvl),
     violinmode = 'group'
   )
+}
+
+Summarise_Salary = function(df, group_cols) {
+  df %>%
+    group_by(across(all_of(group_cols))) %>%
+    summarise(
+      Avg_Salary_USD = round(mean(Salary_USD), 0),
+      Count = n(),
+      .groups = 'drop'
+    ) %>%
+    mutate(
+      Percentage = round(Count / sum(Count) * 100, 2)
+    ) %>%
+    arrange(desc(Avg_Salary_USD))
+}
+
+Pie_1lvl = function(df_summary, lvl, subLvl = 'NULL') {
+  plot_ly(
+    data = df_summary,
+    labels = ~get(lvl),
+    values = ~Count,
+    type = "pie"
+  ) %>%
+    layout(
+      title = paste("% of Jobs by", lvl)
+    )
+}
+
+Sunburst_2lvl = function(df_summary, lvl, subLvl, numcol = 'Percentage') {
+  df_summary = df_summary %>%
+    rename(Level = all_of(lvl),
+           SubLevel = all_of(subLvl),
+           Value = all_of(numcol)) %>%
+    mutate(
+      Level = as.character(Level),
+      SubLevel = as.character(SubLevel)
+    )
+  root_node = tibble(
+    labels = 'Total',
+    parents = '',
+    values = sum(df_summary$Value, na.rm = TRUE)
+  )
+  df_lvl = df_summary %>%
+    group_by(Level) %>%
+    summarise(values = sum(Value, na.rm = TRUE), .groups = 'drop') %>%
+    transmute(
+      labels = Level,
+      parents = 'Total',
+      values
+    )
+  df_subLvl = df_summary %>%
+    transmute(
+      labels = SubLevel,
+      parents = Level,
+      values = Value
+    )
+  df_sunburst = bind_rows(root_node, df_lvl, df_subLvl)
+  plot_ly(
+    data = df_sunburst,
+    labels = ~labels,
+    parents = ~parents,
+    values = ~values,
+    type = 'sunburst',
+    branchvalues = 'total'
+  ) %>% layout(title = paste("% of rows by", lvl, subLvl))
+}
+
+Pie_Sunburst = function(df, lvl, subLvl) {
+  if (is.null(subLvl) || subLvl == 'NULL') {
+    Pie_1lvl(Summarise_Salary(df, lvl), lvl)}
+  else {Sunburst_2lvl(Summarise_Salary(df, c(lvl, subLvl)), lvl, subLvl)}
 }
 
 World_Map_by_Salary = function(df) {
@@ -112,6 +183,37 @@ World_Map_by_Salary = function(df) {
       )
     )
 }
+
+
+Bar_2lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
+  if (is.null(subLvl) || subLvl == 'NULL') {
+    plt = plot_ly(
+      data = df %>% 
+        group_by(across(all_of(lvl))) %>%
+        summarise(Value = mean(.data[[numcol]], na.rm = TRUE), .groups = 'drop'),
+      x = ~get(lvl),
+      y = ~Value,
+      color = ~get(lvl),
+      type = 'bar'
+    )
+  } else {
+    plt = plot_ly(
+      data = df %>% 
+        group_by(across(all_of(c(lvl, subLvl)))) %>%
+        summarise(Value = mean(.data[[numcol]], na.rm = TRUE), .groups = 'drop'),
+      x = ~get(lvl),
+      y = ~Value,
+      color = ~get(subLvl),
+      type = 'bar'
+    )
+  }
+  plt %>% layout(
+    xaxis = list(title = lvl),
+    yaxis = list(title = 'Salary USD (avg)', zeroline = FALSE),
+    barmode = 'group'
+  )
+}
+
 
 Bar_Trend_Salary = function(df, numcol = 'Salary_USD', aggfun = mean) {
   df_summary = df %>%
@@ -190,35 +292,42 @@ ui = fluidPage(
                  div(strong('Field'),
                      fluidRow(column(6, actionButton('select_all_Field', 'Select All')),
                               column(6, actionButton('clear_all_Field', 'Clear All'))),
-                     selectInput('Field', NULL, choices = fields, multiple = TRUE)),
+                     selectizeInput('Field', NULL, choices = fields, multiple = TRUE, options = list(plugins = list('remove_button')))),
+                 
                  div(strong('Job Title'),
                      fluidRow(column(6, actionButton('select_all_Title', 'Select All')),
                               column(6, actionButton('clear_all_Title', 'Clear All'))),
-                     selectInput('Job_Title', NULL, choices = titles, multiple = TRUE)),
+                     selectizeInput('Job_Title', NULL, choices = titles, multiple = TRUE, options = list(plugins = list('remove_button')))),
+                 
                  div(strong('Experience Level'),
                      fluidRow(column(6, actionButton('select_all_Exp', 'Select All')),
                               column(6, actionButton('clear_all_Exp', 'Clear All'))),
-                     selectInput('Experience_Level', NULL, choices = exp_lvls, multiple = TRUE)),
+                     selectizeInput('Experience_Level', NULL, choices = exp_lvls, multiple = TRUE, options = list(plugins = list('remove_button')))),
+                 
                  div(strong('Work Time Arrangement'),
                      fluidRow(column(6, actionButton('select_all_Time', 'Select All')),
                               column(6, actionButton('clear_all_Time', 'Clear All'))),
-                     selectInput('Work_Time_Arrangement', NULL, choices = times, multiple = TRUE)),
+                     selectizeInput('Work_Time_Arrangement', NULL, choices = times, multiple = TRUE, options = list(plugins = list('remove_button')))),
+                 
                  div(strong('Work Office Arrangement'),
                      fluidRow(column(6, actionButton('select_all_Office', 'Select All')),
                               column(6, actionButton('clear_all_Office', 'Clear All'))),
-                     selectInput('Work_Office_Arrangement', NULL, choices = office_arrangements, multiple = TRUE)),
+                     selectizeInput('Work_Office_Arrangement', NULL, choices = office_arrangements, multiple = TRUE, options = list(plugins = list('remove_button')))),
+                 
                  div(strong('Continent'),
                      fluidRow(column(6, actionButton('select_all_Continent', 'Select All')),
                               column(6, actionButton('clear_all_Continent', 'Clear All'))),
-                     selectInput('Continent', NULL, choices = continents, multiple = TRUE)),
+                     selectizeInput('Continent', NULL, choices = continents, multiple = TRUE, options = list(plugins = list('remove_button')))),
+                 
                  div(strong('Country'),
                      fluidRow(column(6, actionButton('select_all_Country', 'Select All')),
                               column(6, actionButton('clear_all_Country', 'Clear All'))),
-                     selectInput('Company_Location_Name', NULL, choices = countries, multiple = TRUE)),
+                     selectizeInput('Company_Location_Name', NULL, choices = countries, multiple = TRUE, options = list(plugins = list('remove_button')))),
+                 
                  div(strong('Company Size'),
                      fluidRow(column(6, actionButton('select_all_Size', 'Select All')),
                               column(6, actionButton('clear_all_Size', 'Clear All'))),
-                     selectInput('Company_Size', NULL, choices = sizes, multiple = TRUE))
+                     selectizeInput('Company_Size', NULL, choices = sizes, multiple = TRUE, options = list(plugins = list('remove_button'))))
                ),
                mainPanel(plotlyOutput('salary_plot', height = '800px'))
              )
@@ -227,16 +336,32 @@ ui = fluidPage(
     tabPanel('Violin',
              sidebarLayout(
                sidebarPanel(
-                 selectInput('violin_Lvl', 'Group', 
+                 selectInput('violin_lvl', 'Grouping', 
                              choices = c('Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
                                          'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
                              selected = 'Field'),
-                 selectInput('violin_subLvl', 'Sub-Group', 
+                 selectInput('violin_subLvl', 'Sub-Grouping', 
                              choices = c('NULL', 'Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
                                          'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
-                             selected = 'Null')
+                             selected = 'NULL')
                ),
                mainPanel(plotlyOutput('violin_plot', height = '800px'))
+             )
+    ),
+    
+    tabPanel('Pie-Sunburst',
+             sidebarLayout(
+               sidebarPanel(
+                 selectInput('pie_lvl', 'Grouping', 
+                             choices = c('Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
+                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                             selected = 'Field'),
+                 selectInput('sunburst_subLvl', 'Sub-Grouping', 
+                             choices = c('NULL', 'Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
+                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                             selected = 'NULL')
+               ),
+               mainPanel(plotlyOutput('pie_sunburst', height = '800px'))
              )
     ),
     
@@ -244,6 +369,21 @@ ui = fluidPage(
              mainPanel(plotlyOutput('world_map_plot', height = '1200px'))
     ),
     
+    tabPanel('Bar',
+             sidebarLayout(
+               sidebarPanel(
+                 selectInput('bar_lvl', 'Grouping', 
+                             choices = c('Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
+                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                             selected = 'Field'),
+                 selectInput('bar_subLvl', 'Sub-Grouping', 
+                             choices = c('NULL', 'Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
+                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                             selected = 'NULL')
+               ),
+               mainPanel(plotlyOutput('bar_plot', height = '800px'))
+             )
+    ),
     tabPanel('Annual Trend',
              mainPanel(plotlyOutput('annual_trend_plot', height = '800px'))
     ),
@@ -268,7 +408,7 @@ server = function(input, output, session) {
   
   #Reactive filtered data
   filtered_data = reactive({
-    df = factor_mutation(data)
+    df = data
     if (length(input$Field)) df = df %>% filter(Field %in% input$Field)
     if (length(input$Job_Title)) df = df %>% filter(Job_Title %in% input$Job_Title)
     if (length(input$Experience_Level)) df = df %>% filter(Experience_Level %in% input$Experience_Level)
@@ -326,7 +466,15 @@ server = function(input, output, session) {
   })
   
   output$violin_plot = renderPlotly({
-    Violin_2Lvl(filtered_data_2024(), input$violin_Lvl, input$violin_subLvl)
+    Violin_2lvl(filtered_data_2024(), input$violin_lvl, input$violin_subLvl)
+  })
+  
+  output$pie_sunburst = renderPlotly({
+    Pie_Sunburst(filtered_data_2024(), input$pie_lvl, input$sunburst_subLvl)
+  })
+  
+  output$bar_plot = renderPlotly({
+    Bar_2lvl(filtered_data_2024(), input$bar_lvl, input$bar_subLvl)
   })
   
   output$annual_trend_plot = renderPlotly({
