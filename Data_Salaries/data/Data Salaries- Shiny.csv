@@ -1,4 +1,4 @@
-"Work_Year","Field","Job_Title","Experience_Level","Work_Time_Arrangement","Work_Office_Arrangement","Company_Size","Continent","Company_Location_Name","Company_Location_Code3","Salary_USD"
+"Work_Year","Field","Job_Title","Experience_Level","Work_Time_Arrangement","Work_Office_Arrangement","Company_Size","Continent","Country","Company_Location_Code3","Salary_USD"
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",200200
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",186915
 2024,"Software Development   (general)","Software Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",240240
@@ -11,8 +11,8 @@
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",264000
 2024,"Software Development   (general)","Software Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",264200
 2024,"Software Development   (general)","Software Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",143100
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",264200
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",143100
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",264200
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",143100
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",239000
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",161000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",196900
@@ -185,10 +185,10 @@
 2024,"Software Development   (general)","Software Development Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",194000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",355000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",194000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",355000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",194000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",250000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",145000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",355000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",194000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",250000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",145000
 2024,"Data Science","Research Scientist","Entry","Full-time","In-Person","M","Americas","United States","USA",237500
 2024,"Data Science","Research Scientist","Entry","Full-time","In-Person","M","Americas","United States","USA",137750
 2024,"Data Science","Research Scientist","Entry","Full-time","In-Person","M","Americas","Canada","CAN",210960
@@ -299,8 +299,8 @@
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","Canada","CAN",117000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","Canada","CAN",276760
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","Canada","CAN",148960
-2024,"Data Science","Machine Learning Scientist","Entry","Full-time","In-Person","M","Americas","United States","USA",237500
-2024,"Data Science","Machine Learning Scientist","Entry","Full-time","In-Person","M","Americas","United States","USA",137750
+2024,"Machine Learning","Machine Learning Scientist","Entry","Full-time","In-Person","M","Americas","United States","USA",237500
+2024,"Machine Learning","Machine Learning Scientist","Entry","Full-time","In-Person","M","Americas","United States","USA",137750
 2024,"Machine Learning","Machine Learning Engineer","Entry","Full-time","In-Person","M","Americas","United States","USA",250000
 2024,"Machine Learning","Machine Learning Engineer","Entry","Full-time","In-Person","M","Americas","United States","USA",145000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",355000
@@ -2155,8 +2155,8 @@
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",170700
 2024,"Software Development   (general)","Software Developer","Senior","Full-time","In-Person","M","Americas","United States","USA",178200
 2024,"Software Development   (general)","Software Developer","Senior","Full-time","In-Person","M","Americas","United States","USA",74800
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",179000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",112000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",179000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",112000
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",286000
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",143000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",234000
@@ -2201,8 +2201,8 @@
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",146000
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",207575
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",138225
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",720000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",170000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",720000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",170000
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Europe","United Kingdom","GBR",143750
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Europe","United Kingdom","GBR",100000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",225000
@@ -2317,8 +2317,8 @@
 2024,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","Canada","CAN",102000
 2024,"Data Analysis","Data Analytics Specialist","Entry","Full-time","In-Person","M","Americas","United States","USA",116500
 2024,"Data Analysis","Data Analytics Specialist","Entry","Full-time","In-Person","M","Americas","United States","USA",116500
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",107200
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",107200
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",107200
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",107200
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",229900
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",201400
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",300200
@@ -2531,8 +2531,8 @@
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","Canada","CAN",74270
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",267900
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",234700
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","Canada","CAN",133000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","Canada","CAN",83000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","Canada","CAN",133000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","Canada","CAN",83000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",96600
 2024,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",172000
@@ -2627,8 +2627,8 @@
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",138000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",150000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",130000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",140280
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",140280
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",140280
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",140280
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",219100
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",118500
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",322300
@@ -2867,8 +2867,8 @@
 2024,"Data Analysis","Data Analytics Specialist","Mid","Full-time","In-Person","M","Americas","United States","USA",116500
 2024,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",96800
 2024,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",60600
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",259600
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",107300
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",259600
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",107300
 2024,"Data Engineering","Data Team Lead","Senior","Full-time","In-Person","M","Americas","United States","USA",173900
 2024,"Data Engineering","Data Team Lead","Senior","Full-time","In-Person","M","Americas","United States","USA",104300
 2024,"Research & Development   (general)","Robotics Engineer","Mid","Full-time","In-Person","M","Americas","Canada","CAN",120000
@@ -3140,8 +3140,8 @@
 2024,"Machine Learning","Machine Learning Developer","Senior","Full-time","In-Person","M","Americas","Canada","CAN",128300
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",240500
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",192500
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",300000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",200000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",300000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",200000
 2024,"Data Engineering","Systems Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",265000
 2024,"Data Engineering","Systems Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",237000
@@ -3273,10 +3273,10 @@
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","Canada","CAN",180000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",309000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",161000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",184000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",109480
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","Canada","CAN",149600
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","Canada","CAN",115600
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",184000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",109480
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","Canada","CAN",149600
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","Canada","CAN",115600
 2024,"Software Development   (general)","Software Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",200214
 2024,"Software Development   (general)","Software Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",133476
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",293250
@@ -3621,8 +3621,8 @@
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",138400
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",284000
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",189000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",179000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",112000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",179000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",112000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",251250
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",120750
 2024,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",139360
@@ -4298,8 +4298,8 @@
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",126600
 2024,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",242974
 2024,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",101239
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",200000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",200000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",126800
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",126800
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",215300
@@ -4496,8 +4496,8 @@
 2024,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",90000
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",276000
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",148000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",286000
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",143000
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",210000
@@ -4830,8 +4830,8 @@
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",140000
 2024,"Machine Learning","Machine Learning Platform Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",220000
 2024,"Machine Learning","Machine Learning Platform Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",135000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",135000
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",290180
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",258524
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",180000
@@ -4974,8 +4974,8 @@
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",100000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",253000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",187000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",208300
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",208300
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",233000
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",209700
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",233000
@@ -5706,8 +5706,8 @@
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",209720
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",161500
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",161500
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",203280
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",181479
 2024,"Data Science","Applied Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",250200
@@ -6482,8 +6482,8 @@
 2024,"Business Intelligence","BI Developer","Mid","Full-time","In-Person","M","Americas","United States","USA",75000
 2024,"Data Engineering","Head of Data","Executive","Full-time","In-Person","M","Americas","United States","USA",232000
 2024,"Data Engineering","Head of Data","Executive","Full-time","In-Person","M","Americas","United States","USA",210000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",250000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",200000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",250000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",200000
 2024,"Artificial Intelligence   (general)","AI Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",285000
 2024,"Artificial Intelligence   (general)","AI Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",125600
 2024,"Artificial Intelligence   (general)","AI Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",220000
@@ -6570,8 +6570,8 @@
 2024,"Software Development   (general)","Software Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",219696
 2024,"Software Development   (general)","Software Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",240240
 2024,"Software Development   (general)","Software Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",214032
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",277000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",173000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",277000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",173000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",300200
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",170700
 2024,"Software Development   (general)","Software Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",256500
@@ -7836,8 +7836,8 @@
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",134000
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",161500
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",161500
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",270000
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",183600
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",258100
@@ -8321,8 +8321,8 @@
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",168300
 2024,"Machine Learning","Head of Machine Learning","Executive","Full-time","In-Person","M","Americas","United States","USA",300000
 2024,"Machine Learning","Head of Machine Learning","Executive","Full-time","In-Person","M","Americas","United States","USA",200000
-2024,"Data Science","Machine Learning Scientist","Executive","Full-time","In-Person","M","Americas","United States","USA",183400
-2024,"Data Science","Machine Learning Scientist","Executive","Full-time","In-Person","M","Americas","United States","USA",183400
+2024,"Machine Learning","Machine Learning Scientist","Executive","Full-time","In-Person","M","Americas","United States","USA",183400
+2024,"Machine Learning","Machine Learning Scientist","Executive","Full-time","In-Person","M","Americas","United States","USA",183400
 2024,"Machine Learning","Machine Learning Infrastructure Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",239040
 2024,"Machine Learning","Machine Learning Infrastructure Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",199200
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
@@ -8600,8 +8600,8 @@
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",189800
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",250200
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",117200
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",204600
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",84500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",204600
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",84500
 2024,"Data Engineering","Data Manager","Mid","Full-time","Remote","M","Americas","United States","USA",100000
 2024,"Data Engineering","Data Manager","Mid","Full-time","Remote","M","Americas","United States","USA",64000
 2024,"Data Engineering","Data Management Lead","Senior","Full-time","In-Person","M","Europe","United Kingdom","GBR",85612
@@ -8820,8 +8820,8 @@
 2024,"Data Science","Applied Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",98300
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",284900
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",161700
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",256500
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",138900
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",256500
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",138900
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",364100
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",199800
 2024,"Artificial Intelligence   (general)","AI Solution Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",259912
@@ -9232,8 +9232,8 @@
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",90000
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",161500
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",161500
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",130100
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",242200
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",129400
 2024,"Business Intelligence","Business Intelligence Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",145793
@@ -10556,8 +10556,8 @@
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",173400
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",300200
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",199800
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",160000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",160000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",160000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",160000
 2024,"Business Intelligence","Business Intelligence","Senior","Full-time","Remote","M","Americas","United States","USA",160000
 2024,"Business Intelligence","Business Intelligence","Senior","Full-time","Remote","M","Americas","United States","USA",145000
 2024,"Business Intelligence","Business Intelligence Analyst","Entry","Full-time","Remote","M","Americas","United States","USA",78000
@@ -10762,8 +10762,8 @@
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",86000
 2024,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",165025
 2024,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",143500
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",150000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",60000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",150000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",60000
 2024,"Data Science","Applied Scientist","Mid","Full-time","In-Person","L","Americas","United States","USA",222200
 2024,"Data Science","Applied Scientist","Mid","Full-time","In-Person","L","Americas","United States","USA",136000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
@@ -10939,8 +10939,8 @@
 2024,"Data Engineering","Data Manager","Senior","Full-time","Remote","M","Americas","United States","USA",80000
 2024,"Business Intelligence","Business Intelligence Analyst","Senior","Full-time","In-Person","M","Americas","Canada","CAN",119892
 2024,"Business Intelligence","Business Intelligence Analyst","Senior","Full-time","In-Person","M","Americas","Canada","CAN",93752
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",250000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",125000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",250000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",125000
 2024,"Data Engineering","Data Integration Specialist","Mid","Full-time","Remote","M","Americas","United States","USA",105000
 2024,"Data Engineering","Data Integration Specialist","Mid","Full-time","Remote","M","Americas","United States","USA",80000
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",172000
@@ -11219,8 +11219,8 @@
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",139800
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Europe","United Kingdom","GBR",62500
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Europe","United Kingdom","GBR",50000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",204600
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",84500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",204600
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",84500
 2024,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",90000
 2024,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",70000
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",155000
@@ -11628,8 +11628,8 @@
 2024,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",117000
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",250800
 2024,"Data Science","Research Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",167200
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","Canada","CAN",180000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","Canada","CAN",117000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","Canada","CAN",180000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","Canada","CAN",117000
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",115000
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",100000
 2024,"Software Development   (general)","Prompt Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",500000
@@ -11848,8 +11848,8 @@
 2024,"Business Intelligence","Business Intelligence Analyst","Entry","Full-time","Remote","M","Americas","United States","USA",167898
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",250000
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",110100
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",189975
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",142200
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",189975
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",142200
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",100000
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",77100
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",95000
@@ -12519,8 +12519,8 @@
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",124373
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",237600
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",146900
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",179000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",112000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",179000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",112000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",57600
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",50700
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",234000
@@ -12722,8 +12722,8 @@
 2024,"Data Science","Research Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",200000
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",260000
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",192000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",284900
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",161700
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",284900
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",161700
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",243300
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",131500
 2024,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",95000
@@ -13181,8 +13181,8 @@
 2024,"Data Analysis","Research Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",130000
 2024,"Data Engineering","Data Architect","Senior","Full-time","Remote","M","Americas","United States","USA",169847
 2024,"Data Engineering","Data Architect","Senior","Full-time","Remote","M","Americas","United States","USA",131631
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",277000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",173000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",277000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",173000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",264500
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",165600
 2024,"Business Intelligence","Business Intelligence","Senior","Full-time","Remote","M","Americas","United States","USA",194000
@@ -13360,8 +13360,8 @@
 2024,"Data Engineering","Data Manager","Senior","Full-time","In-Person","M","Americas","United States","USA",104000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",97000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",62000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",176000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",72700
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",176000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",72700
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Africa","South Africa","ZAF",42457
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Africa","South Africa","ZAF",39245
 2024,"Data Science","Research Scientist","Entry","Full-time","Remote","M","Americas","United States","USA",170500
@@ -13536,8 +13536,8 @@
 2024,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",130000
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",172000
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",75600
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",201000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",125500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",201000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",125500
 2024,"Business Intelligence","Business Intelligence Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",187000
 2024,"Business Intelligence","Business Intelligence Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",117000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",61700
@@ -13995,8 +13995,8 @@
 2024,"Business Intelligence","Business Intelligence","Senior","Full-time","In-Person","M","Americas","United States","USA",132600
 2024,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",190000
 2024,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",152000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",125000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",110000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",125000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",110000
 2024,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",84105
 2024,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",76095
 2024,"Data Analysis","Data Analytics Manager","Mid","Full-time","In-Person","M","Americas","United States","USA",203900
@@ -14209,8 +14209,8 @@
 2024,"Business Intelligence","Business Intelligence Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",80000
 2024,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",175000
 2024,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",115200
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",270000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",185000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",270000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",185000
 2024,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",165000
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",267900
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",234700
@@ -14537,8 +14537,8 @@
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Europe","Germany","DEU",93750
 2024,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",105000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",75000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",235000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",178000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",235000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",178000
 2024,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",165000
 2024,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",123000
 2024,"Data Engineering","Data Infrastructure Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",190000
@@ -14589,8 +14589,8 @@
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",72100
 2024,"Business Intelligence","Business Intelligence","Senior","Full-time","In-Person","M","Americas","United States","USA",135193
 2024,"Business Intelligence","Business Intelligence","Senior","Full-time","In-Person","M","Americas","United States","USA",90129
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",165000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",103000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",165000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",103000
 2024,"Business Intelligence","Business Intelligence Lead","Senior","Full-time","Remote","M","Americas","United States","USA",144300
 2024,"Business Intelligence","Business Intelligence Lead","Senior","Full-time","Remote","M","Americas","United States","USA",104800
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",212000
@@ -14754,8 +14754,8 @@
 2024,"Business Intelligence","Business Intelligence Engineer","Mid","Full-time","Remote","M","Americas","United States","USA",65000
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",180000
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",130000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",215000
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",100200
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",150000
@@ -14779,8 +14779,8 @@
 2024,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",55200
 2024,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",186000
 2024,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",81800
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
 2024,"Business Intelligence","Business Intelligence Engineer","Mid","Full-time","Remote","M","Americas","United States","USA",89500
 2024,"Business Intelligence","Business Intelligence Engineer","Mid","Full-time","Remote","M","Americas","United States","USA",65000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",140000
@@ -14835,8 +14835,8 @@
 2024,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",110000
 2024,"Data Science","Data Modeler","Mid","Full-time","In-Person","M","Americas","United States","USA",185800
 2024,"Data Science","Data Modeler","Mid","Full-time","In-Person","M","Americas","United States","USA",93400
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",175000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",145000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",175000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",145000
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","L","Americas","United States","USA",223600
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","L","Americas","United States","USA",115000
 2024,"Data Analysis","Research Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",80000
@@ -14847,8 +14847,8 @@
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","Canada","CAN",94600
 2024,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",135000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",110000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",196350
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",127500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",196350
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",127500
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Oceania","Australia","AUS",116259
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Oceania","Australia","AUS",88995
 2024,"Data Science","Data Scientist","Entry","Full-time","In-Person","M","Americas","United States","USA",46080
@@ -15170,8 +15170,8 @@
 2024,"Data Engineering","Cloud Database Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",106000
 2024,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",160000
 2024,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",110000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",720000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",170000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",720000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",170000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",181610
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",100000
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",321000
@@ -15614,8 +15614,8 @@
 2024,"Data Science","Research Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",73000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",130000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",100000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",234000
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",146000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Europe","Lithuania","LTU",44000
@@ -15849,8 +15849,8 @@
 2024,"Business Intelligence","Business Intelligence","Executive","Full-time","In-Person","M","Americas","United States","USA",176900
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",212000
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",93300
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",200000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",140000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",200000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",140000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",80080
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",65400
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",210000
@@ -16034,8 +16034,8 @@
 2024,"Data Science","Applied Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",180000
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",202000
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",137000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",204600
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",84500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",204600
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",84500
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",190000
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",151500
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Europe","United Kingdom","GBR",81250
@@ -16198,8 +16198,8 @@
 2024,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",143000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",340000
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",212000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",230000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",230000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
 2024,"Data Analysis","Quantitative Research Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",51000
 2024,"Machine Learning","Lead Machine Learning Engineer","Senior","Full-time","Hybrid","L","Europe","Finland","FIN",77777
 2024,"Machine Learning","Machine Learning Engineer","Entry","Full-time","In-Person","S","Asia","Turkey","TUR",27000
@@ -16547,8 +16547,8 @@
 2024,"Data Science","Research Engineer","Entry","Full-time","In-Person","M","Americas","United States","USA",193500
 2024,"Data Engineering","Data Engineer","Entry","Full-time","Hybrid","L","Americas","Mexico","MEX",17598
 2024,"Data Engineering","Big Data Engineer","Entry","Full-time","Hybrid","L","Americas","Mexico","MEX",17600
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",140000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",90000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",140000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",90000
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",333500
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",180000
 2024,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",285670
@@ -16694,8 +16694,8 @@
 2024,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",111500
 2024,"Artificial Intelligence   (general)","AI Programmer","Mid","Full-time","In-Person","S","Europe","Bosnia And Herzegovina","BIH",30000
 2024,"Data Analysis","Data Analyst","Mid","Full-time","Remote","M","Americas","United States","USA",75000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",250000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",125000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",250000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",125000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",83300
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",47500
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",154818
@@ -16763,8 +16763,8 @@
 2024,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",126800
 2024,"Data Science","Data Modeler","Mid","Full-time","In-Person","M","Americas","Canada","CAN",114000
 2024,"Data Science","Data Modeler","Mid","Full-time","In-Person","M","Americas","Canada","CAN",69000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",277000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",173000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",277000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",173000
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",179000
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",112000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","Remote","M","Americas","United States","USA",130000
@@ -16813,8 +16813,8 @@
 2024,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",90000
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",200000
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",140000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",196350
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",127500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",196350
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",127500
 2024,"Data Engineering","Data Manager","Senior","Full-time","In-Person","M","Americas","United States","USA",219600
 2024,"Data Engineering","Data Manager","Senior","Full-time","In-Person","M","Americas","United States","USA",125500
 2024,"Artificial Intelligence   (general)","AI Product Manager","Mid","Full-time","In-Person","M","Americas","United States","USA",212000
@@ -17111,8 +17111,8 @@
 2024,"Data Engineering","Data Manager","Senior","Full-time","In-Person","M","Americas","United States","USA",55200
 2024,"Data Science","Data Scientist","Entry","Full-time","In-Person","M","Americas","United States","USA",86900
 2024,"Data Science","Data Scientist","Entry","Full-time","In-Person","M","Americas","United States","USA",60800
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",140000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",90000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",140000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",90000
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",234000
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",146000
 2024,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","Canada","CAN",120000
@@ -17175,8 +17175,8 @@
 2024,"Data Engineering","Analytics Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",176000
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",440000
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",360000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","Canada","CAN",180000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","Canada","CAN",117000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","Canada","CAN",180000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Remote","M","Americas","Canada","CAN",117000
 2024,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",180000
 2024,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",140000
 2024,"Data Analysis","Data Analytics Lead","Senior","Full-time","In-Person","M","Americas","United States","USA",155000
@@ -17649,8 +17649,8 @@
 2024,"Data Analysis","Data Analyst","Entry","Full-time","Remote","M","Americas","United States","USA",75000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",115000
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",90000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",750000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",750000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",247300
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",139700
 2024,"Data Science","Research Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",360000
@@ -17811,8 +17811,8 @@
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",172000
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",175000
 2024,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",152000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",186153
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",165384
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",186153
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",165384
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",208500
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",165000
 2024,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",172200
@@ -18190,8 +18190,8 @@
 2024,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",100000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",188000
 2024,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",118000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",210000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",132000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",210000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",132000
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",147000
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",92000
 2024,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",116000
@@ -18504,8 +18504,8 @@
 2024,"Data Science","Data Scientist","Executive","Full-time","In-Person","M","Americas","United States","USA",180000
 2024,"Machine Learning","MLOps Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",175000
 2024,"Machine Learning","MLOps Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",110000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",252000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",157500
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",252000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",157500
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",267900
 2024,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",234700
 2024,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",195500
@@ -18687,8 +18687,8 @@
 2024,"Data Engineering","Analytics Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",75000
 2024,"Data Engineering","Data Lead","Senior","Full-time","In-Person","M","Americas","United States","USA",180000
 2024,"Data Engineering","Data Lead","Senior","Full-time","In-Person","M","Americas","United States","USA",140000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",235000
-2024,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",153000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",235000
+2024,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",153000
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",440000
 2024,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",245000
 2024,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",116800
@@ -18835,8 +18835,8 @@
 2024,"Data Engineering","Analytics Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",165000
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",218000
 2024,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",152600
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",750000
-2024,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",750000
+2024,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",136197
 2024,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",100000
 2024,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",440000
@@ -19296,8 +19296,8 @@
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",115000
 2023,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",75000
 2023,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",70000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",233500
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",233500
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137500
 2023,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",166000
 2023,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",73100
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",176875
@@ -19433,8 +19433,8 @@
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",46200
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",272400
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",155600
-2023,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",750000
-2023,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
+2023,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",750000
+2023,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",93918
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",51962
 2023,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",115000
@@ -19479,8 +19479,8 @@
 2023,"Data Science","Research Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",169900
 2023,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",235000
 2023,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",169900
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",135000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",135000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",210000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",151800
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",210000
@@ -20281,8 +20281,8 @@
 2023,"Data Analysis","Data Analyst","Entry","Full-time","In-Person","M","Americas","United States","USA",105000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",99000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",52500
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",180514
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",108308
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",180514
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",108308
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",210000
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",147000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",290300
@@ -20425,8 +20425,8 @@
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",128000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",154000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",126000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",240000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",157250
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",240000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",157250
 2023,"Data Engineering","Data Engineer","Executive","Full-time","Remote","M","Americas","United States","USA",219650
 2023,"Data Engineering","Data Engineer","Executive","Full-time","Remote","M","Americas","United States","USA",136000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",150000
@@ -20677,8 +20677,8 @@
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",116000
 2023,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",323300
 2023,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",184700
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",250000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",250000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
 2023,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",136000
 2023,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",91000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",185900
@@ -20912,8 +20912,8 @@
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",82500
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",247250
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",160000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",169000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",105500
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",169000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",105500
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",195800
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",161900
 2023,"Business Intelligence","Business Intelligence Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",108500
@@ -21595,8 +21595,8 @@
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",173200
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",235000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",204000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",300000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",222000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",300000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",222000
 2023,"Data Engineering","Analytics Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",160000
 2023,"Data Engineering","Analytics Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",136000
 2023,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",206000
@@ -21779,8 +21779,8 @@
 2023,"Data Analysis","Data Analyst","Mid","Full-time","Remote","M","Americas","United States","USA",127075
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",162000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",111000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",280000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",182750
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",280000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",182750
 2023,"Data Science","Research Scientist","Senior","Full-time","In-Person","L","Americas","United States","USA",212800
 2023,"Data Science","Research Scientist","Senior","Full-time","In-Person","L","Americas","United States","USA",124100
 2023,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",196000
@@ -22165,8 +22165,8 @@
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",90000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",223602
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",143520
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",180000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",140000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",180000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",140000
 2023,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",180000
 2023,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",162000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",121809
@@ -22321,8 +22321,8 @@
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",175000
 2023,"Business Intelligence","Business Intelligence Engineer","Senior","Full-time","In-Person","L","Americas","United States","USA",185000
 2023,"Business Intelligence","Business Intelligence Engineer","Senior","Full-time","In-Person","L","Americas","United States","USA",79600
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",180514
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",108308
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",180514
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",108308
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",200000
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",150000
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",208450
@@ -22433,8 +22433,8 @@
 2023,"Artificial Intelligence   (general)","AI Developer","Senior","Full-time","Remote","S","Europe","Italy","ITA",53984
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",226600
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",140100
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",204500
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",142200
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",204500
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",142200
 2023,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
 2023,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",140000
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",204600
@@ -22519,8 +22519,8 @@
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",173400
 2023,"Data Engineering","Data Architect","Senior","Full-time","Remote","M","Americas","United States","USA",215000
 2023,"Data Engineering","Data Architect","Senior","Full-time","Remote","M","Americas","United States","USA",153000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Europe","United Kingdom","GBR",210398
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Europe","United Kingdom","GBR",147648
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Europe","United Kingdom","GBR",210398
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Europe","United Kingdom","GBR",147648
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",105000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",75000
 2023,"Machine Learning","MLOps Engineer","Senior","Full-time","Remote","L","Americas","United States","USA",60000
@@ -22572,8 +22572,8 @@
 2023,"Data Analysis","Data Analyst","Mid","Full-time","Remote","M","Americas","United States","USA",70000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",204500
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",138900
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",204500
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",142200
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",204500
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","Canada","CAN",142200
 2023,"Data Engineering","Data Manager","Mid","Full-time","In-Person","M","Americas","United States","USA",115500
 2023,"Data Engineering","Data Manager","Mid","Full-time","In-Person","M","Americas","United States","USA",73500
 2023,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",146000
@@ -22789,8 +22789,8 @@
 2023,"Artificial Intelligence   (general)","AI Engineer","Mid","Full-time","Remote","S","Americas","United States","USA",140000
 2023,"Data Engineering","Data Manager","Mid","Full-time","In-Person","M","Americas","United States","USA",130000
 2023,"Data Engineering","Data Manager","Mid","Full-time","In-Person","M","Americas","United States","USA",100000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",163800
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",126000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",163800
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",126000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",225000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",111967
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","L","Americas","United States","USA",205600
@@ -23000,7 +23000,7 @@
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",156400
 2023,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",250000
 2023,"Data Science","Research Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",176000
-2022,"Data Science","Machine Learning Scientist","Entry","Full-time","Hybrid","S","Americas","United States","USA",80000
+2022,"Machine Learning","Machine Learning Scientist","Entry","Full-time","Hybrid","S","Americas","United States","USA",80000
 2023,"Data Engineering","Analytics Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",233400
 2023,"Data Engineering","Analytics Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",145300
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",248000
@@ -23315,8 +23315,8 @@
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",101570
 2023,"Data Engineering","Data Strategist","Senior","Full-time","Remote","M","Americas","United States","USA",175000
 2023,"Data Engineering","Data Strategist","Senior","Full-time","Remote","M","Americas","United States","USA",125000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",325000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",171000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",325000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",171000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",180000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",137000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",265000
@@ -23730,10 +23730,10 @@
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",228830
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",148590
 2023,"Artificial Intelligence   (general)","AI Developer","Mid","Full-time","Remote","S","Americas","United States","USA",140000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",180514
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",108308
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",180514
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",108308
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
 2023,"Business Intelligence","Business Intelligence Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",169000
 2023,"Business Intelligence","Business Intelligence Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",110600
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",180514
@@ -23907,8 +23907,8 @@
 2023,"Machine Learning","Machine Learning Software Engineer","Mid","Full-time","Hybrid","L","Asia","India","IND",24322
 2023,"Business Intelligence","BI Developer","Senior","Full-time","Remote","M","Americas","United States","USA",135000
 2023,"Business Intelligence","BI Developer","Senior","Full-time","Remote","M","Americas","United States","USA",110000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",180514
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",108308
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",180514
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Europe","United Kingdom","GBR",108308
 2023,"Business Intelligence","BI Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",118800
 2023,"Business Intelligence","BI Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",75000
 2023,"Data Engineering","Data Manager","Senior","Full-time","In-Person","M","Americas","United States","USA",145000
@@ -24125,8 +24125,8 @@
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",159000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",231000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",157250
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",240000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",157250
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",240000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",157250
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",232000
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",108000
 2023,"Data Engineering","Data Manager","Senior","Full-time","In-Person","M","Americas","United States","USA",145000
@@ -24868,8 +24868,8 @@
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",110000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",230000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",175000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",175000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",160000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",255000
@@ -25094,18 +25094,18 @@
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",65000
 2023,"Data Engineering","Data Architect","Senior","Full-time","Remote","M","Americas","United States","USA",280100
 2023,"Data Engineering","Data Architect","Senior","Full-time","Remote","M","Americas","United States","USA",168100
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",120000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",200000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",120000
 2023,"Business Intelligence","Business Intelligence Engineer","Senior","Full-time","In-Person","L","Americas","United States","USA",185000
 2023,"Business Intelligence","Business Intelligence Engineer","Senior","Full-time","In-Person","L","Americas","United States","USA",79600
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",149040
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",113900
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",240000
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",180000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",165000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",145000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",165000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",145000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",165000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",145000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",165000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",145000
 2023,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",274450
 2023,"Data Engineering","Data Architect","Senior","Full-time","In-Person","M","Americas","United States","USA",199600
 2023,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",83500
@@ -25260,8 +25260,8 @@
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",180000
 2023,"Data Science","Data Scientist","Executive","Full-time","Remote","M","Americas","United States","USA",260000
 2023,"Data Science","Data Scientist","Executive","Full-time","Remote","M","Americas","United States","USA",192000
-2023,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",170000
-2023,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",125000
+2023,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",170000
+2023,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",125000
 2023,"Business Intelligence","Business Intelligence Data Analyst","Entry","Full-time","Remote","L","Americas","United States","USA",99000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",130000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",100000
@@ -25742,14 +25742,14 @@
 2023,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","Argentina","ARG",60000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",299500
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",245100
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",222000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",138000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",222000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",138000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","Canada","CAN",207300
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","Canada","CAN",149200
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",292000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",164500
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",292200
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",164500
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",292000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",164500
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",292200
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",164500
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",163800
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",126000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",160000
@@ -26335,8 +26335,8 @@
 2023,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",178600
 2023,"Data Science","Data Scientist","Executive","Full-time","In-Person","M","Americas","United States","USA",353200
 2023,"Data Science","Data Scientist","Executive","Full-time","In-Person","M","Americas","United States","USA",249300
-2023,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",230000
-2023,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",220000
+2023,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",230000
+2023,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",220000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",297300
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",198200
 2023,"Data Science","Research Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",210000
@@ -26422,8 +26422,8 @@
 2023,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",140000
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",275300
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",183500
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",220000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",170000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",135000
 2023,"Data Analysis","Data Analyst","Senior","Full-time","In-Person","M","Americas","United States","USA",105500
 2023,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",100000
@@ -26754,8 +26754,8 @@
 2023,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",82920
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",185900
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",129300
-2023,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","S","Americas","United States","USA",200000
-2023,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","S","Americas","United States","USA",125000
+2023,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","S","Americas","United States","USA",200000
+2023,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","S","Americas","United States","USA",125000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",201000
 2023,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",122000
 2023,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",204500
@@ -27555,8 +27555,8 @@
 2022,"Data Analysis","Data Analyst","Entry","Part-time","Remote","L","Americas","United States","USA",25216
 2023,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",210000
 2023,"Data Science","Research Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",165750
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",225000
-2023,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",165750
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",225000
+2023,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",165750
 2023,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Europe","United Kingdom","GBR",110367
 2023,"Machine Learning","Machine Learning Engineer","Mid","Full-time","In-Person","M","Europe","United Kingdom","GBR",67979
 2023,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",135000
@@ -27937,8 +27937,8 @@
 2022,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",160000
 2022,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Europe","France","FRA",63040
 2022,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Europe","France","FRA",52533
-2022,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",165000
-2022,"Data Science","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",135000
+2022,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",165000
+2022,"Machine Learning","Machine Learning Scientist","Mid","Full-time","In-Person","M","Americas","United States","USA",135000
 2022,"Data Engineering","Analytics Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",170000
 2022,"Data Engineering","Analytics Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",125000
 2022,"Data Engineering","Data Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",105000
@@ -28219,7 +28219,7 @@
 2022,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",81666
 2022,"Machine Learning","Machine Learning Engineer","Mid","Full-time","Remote","L","Europe","Switzerland","CHE",104697
 2022,"Machine Learning","Machine Learning Developer","Entry","Full-time","Remote","S","Europe","Germany","DEU",33000
-2022,"Data Science","Machine Learning Scientist","Entry","Full-time","Remote","S","Europe","Germany","DEU",34672
+2022,"Machine Learning","Machine Learning Scientist","Entry","Full-time","Remote","S","Europe","Germany","DEU",34672
 2022,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",201000
 2022,"Machine Learning","Machine Learning Engineer","Senior","Full-time","In-Person","M","Americas","United States","USA",119000
 2022,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",175000
@@ -28656,8 +28656,8 @@
 2022,"Data Engineering","Data Architect","Senior","Full-time","Remote","M","Americas","United States","USA",135000
 2022,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",179400
 2022,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",154000
-2022,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",193900
-2022,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",129300
+2022,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",193900
+2022,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",129300
 2022,"Data Science","Data Scientist","Executive","Full-time","In-Person","M","Americas","United States","USA",222640
 2022,"Data Science","Data Scientist","Executive","Full-time","In-Person","M","Americas","United States","USA",182160
 2022,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",150000
@@ -28744,8 +28744,8 @@
 2022,"Data Analysis","Data Operations Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",66000
 2022,"Data Analysis","Data Analyst","Entry","Full-time","Remote","L","Americas","United States","USA",46000
 2022,"Data Engineering","Data Engineer","Entry","Full-time","Remote","L","Americas","United States","USA",80000
-2022,"Data Science","Machine Learning Scientist","Executive","Full-time","Remote","S","Americas","United States","USA",200000
-2022,"Data Science","Machine Learning Scientist","Executive","Full-time","Remote","S","Americas","United States","USA",180000
+2022,"Machine Learning","Machine Learning Scientist","Executive","Full-time","Remote","S","Americas","United States","USA",200000
+2022,"Machine Learning","Machine Learning Scientist","Executive","Full-time","Remote","S","Americas","United States","USA",180000
 2022,"Artificial Intelligence   (general)","AI Scientist","Executive","Full-time","Remote","S","Americas","United States","USA",200000
 2022,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",204100
 2022,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",136100
@@ -28884,8 +28884,8 @@
 2022,"Data Science","Data Scientist","Senior","Full-time","Remote","L","Americas","United States","USA",140000
 2022,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",216200
 2022,"Data Analysis","Data Analyst","Mid","Full-time","In-Person","M","Americas","United States","USA",144100
-2022,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",216000
-2022,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",144000
+2022,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",216000
+2022,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",144000
 2022,"Data Analysis","Data Analyst","Entry","Full-time","Remote","L","Americas","United States","USA",150000
 2022,"Data Science","Data Scientist","Mid","Full-time","Remote","L","Asia","Indonesia","IDN",53416
 2022,"Data Science","Applied Data Scientist","Entry","Full-time","Hybrid","M","Europe","Austria","AUT",50000
@@ -28957,7 +28957,7 @@
 2022,"Data Engineering","Data Engineer","Senior","Full-time","Remote","M","Americas","United States","USA",100000
 2022,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",150075
 2022,"Data Analysis","Data Analyst","Senior","Full-time","Remote","M","Americas","United States","USA",110925
-2022,"Data Science","Machine Learning Scientist","Mid","Full-time","Remote","M","Africa","Egypt","EGY",22800
+2022,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Remote","M","Africa","Egypt","EGY",22800
 2022,"Data Science","Data Scientist","Senior","Full-time","Remote","L","Americas","United States","USA",160000
 2022,"Data Science","Data Scientist","Senior","Full-time","Remote","L","Americas","United States","USA",92000
 2022,"Machine Learning","Machine Learning Engineer","Senior","Full-time","Remote","L","Americas","United States","USA",202900
@@ -29052,8 +29052,8 @@
 2022,"Data Science","Data Scientist","Senior","Full-time","Remote","L","Americas","Mexico","MEX",60000
 2022,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",82900
 2022,"Data Engineering","Data Engineer","Mid","Full-time","In-Person","M","Americas","United States","USA",63900
-2022,"Data Science","Machine Learning Scientist","Mid","Full-time","Remote","L","Americas","United States","USA",160000
-2022,"Data Science","Machine Learning Scientist","Mid","Full-time","Remote","L","Americas","United States","USA",112300
+2022,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Remote","L","Americas","United States","USA",160000
+2022,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Remote","L","Americas","United States","USA",112300
 2022,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",241000
 2022,"Data Science","Data Scientist","Mid","Full-time","Remote","M","Americas","United States","USA",159000
 2022,"Data Science","Data Scientist","Senior","Full-time","In-Person","M","Americas","United States","USA",180000
@@ -29273,7 +29273,7 @@
 2022,"Data Science","Research Scientist","Senior","Full-time","Hybrid","L","Europe","France","FRA",89306
 2022,"Data Science","Data Scientist","Entry","Full-time","Hybrid","M","Oceania","Australia","AUS",83171
 2022,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",165000
-2022,"Data Science","Machine Learning Scientist","Mid","Full-time","Hybrid","M","Americas","United States","USA",153000
+2022,"Machine Learning","Machine Learning Scientist","Mid","Full-time","Hybrid","M","Americas","United States","USA",153000
 2022,"Data Science","Data Scientist","Senior","Full-time","Remote","M","Americas","United States","USA",100000
 2022,"Machine Learning","Machine Learning Developer","Senior","Full-time","Remote","M","Americas","Canada","CAN",76814
 2022,"Data Science","Data Scientist","Mid","Full-time","Remote","L","Europe","Poland","POL",33609
@@ -29317,7 +29317,7 @@
 2022,"Machine Learning","Lead Machine Learning Engineer","Senior","Full-time","In-Person","M","Europe","Germany","DEU",84053
 2021,"Machine Learning","Machine Learning Engineer","Entry","Full-time","Remote","S","Asia","India","IND",20000
 2022,"Artificial Intelligence   (general)","Computer Vision Engineer","Entry","Full-time","In-Person","M","Americas","United States","USA",125000
-2021,"Data Science","Machine Learning Scientist","Senior","Full-time","Hybrid","S","Americas","United States","USA",120000
+2021,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Hybrid","S","Americas","United States","USA",120000
 2021,"Data Science","Applied Data Scientist","Entry","Full-time","In-Person","L","Europe","United Kingdom","GBR",110037
 2022,"Machine Learning","Machine Learning Engineer","Entry","Full-time","Remote","L","Europe","Portugal","PRT",21013
 2021,"Data Analysis","Data Analyst","Entry","Full-time","Remote","M","Americas","United States","USA",50000
@@ -29377,7 +29377,7 @@
 2021,"Data Engineering","Head of Data","Executive","Full-time","Remote","L","Americas","United States","USA",235000
 2021,"Business Intelligence","BI Data Analyst","Executive","Full-time","Remote","L","Americas","United States","USA",150000
 2020,"Data Engineering","Data Engineer","Executive","Full-time","Hybrid","L","Europe","Spain","ESP",79833
-2021,"Data Science","Machine Learning Scientist","Entry","Full-time","Remote","L","Americas","United States","USA",225000
+2021,"Machine Learning","Machine Learning Scientist","Entry","Full-time","Remote","L","Americas","United States","USA",225000
 2021,"Data Science","Data Scientist","Entry","Full-time","Remote","S","Europe","Germany","DEU",76833
 2020,"Machine Learning","Machine Learning Infrastructure Engineer","Mid","Full-time","In-Person","M","Europe","Portugal","PRT",50180
 2021,"Data Analysis","Marketing Data Analyst","Senior","Full-time","Remote","L","Europe","Denmark","DNK",88654
@@ -29424,7 +29424,7 @@
 2020,"Data Science","Research Scientist","Entry","Full-time","Hybrid","L","Europe","Netherlands","NLD",42000
 2020,"Data Science","Lead Data Scientist","Mid","Full-time","In-Person","L","Asia","United Arab Emirates","ARE",115000
 2021,"Data Science","Research Scientist","Mid","Full-time","Remote","M","Americas","Canada","CAN",63810
-2020,"Data Science","Machine Learning Scientist","Senior","Full-time","In-Person","S","Asia","Japan","JPN",260000
+2020,"Machine Learning","Machine Learning Scientist","Senior","Full-time","In-Person","S","Asia","Japan","JPN",260000
 2021,"Data Science","Data Scientist","Mid","Full-time","In-Person","S","Americas","United States","USA",110000
 2021,"Data Engineering","Data Architect","Mid","Full-time","Remote","L","Americas","United States","USA",180000
 2021,"Data Analysis","Data Analyst","Senior","Full-time","Remote","L","Americas","United States","USA",200000
@@ -29489,7 +29489,7 @@
 2021,"Data Science","Data Scientist","Mid","Full-time","Remote","L","Europe","Spain","ESP",37825
 2020,"Data Analysis","Data Analyst","Mid","Full-time","Remote","L","Americas","United States","USA",85000
 2021,"Data Science","Principal Data Scientist","Executive","Contract","Remote","S","Americas","United States","USA",416000
-2021,"Data Science","Machine Learning Scientist","Senior","Full-time","Remote","L","Americas","Canada","CAN",225000
+2021,"Machine Learning","Machine Learning Scientist","Senior","Full-time","Remote","L","Americas","Canada","CAN",225000
 2021,"Data Science","Data Scientist","Mid","Full-time","Hybrid","L","Europe","United Kingdom","GBR",56256
 2021,"Data Science","Data Scientist","Mid","Full-time","In-Person","M","Asia","India","IND",33808
 2021,"Data Science","Data Scientist","Mid","Full-time","Hybrid","L","Europe","United Kingdom","GBR",116914

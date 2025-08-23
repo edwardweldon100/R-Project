@@ -3,21 +3,33 @@ library(stringr)
 library(formattable)
 library(scales)
 library(countrycode)
+
+#Load dataset
 data_salaries = read.csv('salaries.csv')
+
+#Inspect dataset
 head(data_salaries)
 data_salaries[!complete.cases(data_salaries), ]
 names(data_salaries)[colSums(is.na(data_salaries)) > 0]
+
+#Capitalize column names
 colnames(data_salaries) = colnames(data_salaries) |>
   str_replace_all('_', ' ') |>
   str_to_title() |> 
   str_replace_all(' ', '_')
+
+#Rename columns
 colnames(data_salaries)[which(names(data_salaries) == 'Salary')] = 'Salary_LOC'
 colnames(data_salaries)[which(names(data_salaries) == 'Salary_In_Usd')] = 'Salary_USD'
 colnames(data_salaries)[which(names(data_salaries) == 'Employee_Residence')] = 'Employee_Residence_Code'
 colnames(data_salaries)[which(names(data_salaries) == 'Company_Location')] = 'Company_Location_Code'
 colnames(data_salaries)[which(names(data_salaries) == 'Experience_Level')] = 'Experience_Level_Code'
+
+#Convert Company Size to factor
 data_salaries$Company_Size = factor(data_salaries$Company_Size, 
                                     levels = c('S', 'M', 'L'))
+
+#Load Country Code & (custom) Field legends & define lookup functions
 country_codes_legend = read.csv('continents2.csv')
 field_title_legend = read.csv('data_field_title_legend.csv')
 country_name_lookup = function(code) {
@@ -31,6 +43,8 @@ country_code3_lookup = function(code2) {
 field_lookup = function(title) {
   field_title_legend$Field[match(title, field_title_legend$Title)]
 }
+
+#New columns and factor conversions to existing columns
 data_salaries = data_salaries %>%
   mutate(
     Experience_Level = factor(
@@ -60,6 +74,8 @@ data_salaries = data_salaries %>%
       ifelse(Company_Location_Code3 == 'USA', 'USA', 'Outside_USA'),
       levels = c('USA', 'Outside_USA'))
   )
+
+#Rearrange columns
 data_salaries = data_salaries %>% 
   select(
     Work_Year,
@@ -84,9 +100,23 @@ data_salaries = data_salaries %>%
     Salary_LOC,
     Salary_USD
   )
+
+#Job Count by Year
 yearly_job_count = data_salaries %>% 
   count(Work_Year, name = 'Count')
-yearly_job_count
+yearly_job_count %>%
+  mutate(Count = format(Count, big.mark = ",")) %>%
+  print(row.names = FALSE)
+
+#Job Count by Country
+country_count = data_salaries %>% 
+  count(Company_Location_Name, name = 'Count') %>%
+  arrange(desc(Count))
+country_count %>%
+  mutate(Count = format(Count, big.mark = ",")) %>%
+  print(row.names = FALSE)
+
+#Data Frame copies with FT only, 2024 only, certain columns only
 data_salaries_FTonly = data_salaries %>% filter(Work_Time_Arrangement == 'Full-time') %>%
   arrange(desc(Salary_USD))
 data_salaries_2024 = data_salaries %>% filter(Work_Year == 2024) %>%
@@ -95,10 +125,17 @@ data_salaries_2024_FTonly = data_salaries_2024 %>% filter(Work_Time_Arrangement 
 data_salaries_2024_select = data_salaries_2024 %>% filter(Work_Time_Arrangement == 'Full-time') %>% 
   select(Field, Job_Title, Experience_Level, Work_Time_Arrangement, Work_Office_Arrangement, Company_Size, USA, Continent, Company_Location_Name, Company_Location_Code3, International, Salary_USD)
 data_salaries_2024_select_asc = data_salaries_2024_select %>% arrange(Salary_USD)
+
+#Prepare data frame to load into Shiny app
 data_salaries_shiny = data_salaries %>% 
   select(Work_Year, Field, Job_Title, Experience_Level, Work_Time_Arrangement, Work_Office_Arrangement, Company_Size, Continent, Company_Location_Name, , Company_Location_Code3, Salary_USD)
+colnames(data_salaries_shiny)[which(names(data_salaries_shiny) == 'Company_Location_Name')] = 'Country'
 write.csv(data_salaries_shiny, file='Data Salaries- Shiny.csv', row.names=F)
+
+#Total 2024 Job Count for later formula references
 Total_Count_2024 = nrow(data_salaries_2024)
+
+#FX Rate table
 FX_Rates_2024 = data_salaries_2024 %>%
   group_by(Salary_Currency) %>%
   summarise(
@@ -111,6 +148,8 @@ FX_Rates_2024 = data_salaries_2024 %>%
     FX_Rate = Avg_Salary_LOC / Avg_Salary_USD
   ) %>%
   arrange(Salary_Currency)
+
+#Define Salary Summary function
 Summarise_Salary = function(df, group_cols) {
   df %>%
     group_by(across(all_of(group_cols))) %>%
@@ -124,7 +163,11 @@ Summarise_Salary = function(df, group_cols) {
     ) %>%
     arrange(desc(Avg_Salary_USD))
 }
+
+#Print FX Rates
 FX_Rates_2024
+
+#Summary tables for plotting & analysis
 Field_Summary = Summarise_Salary(data_salaries_2024_FTonly, 'Field')
 Field_Title_Summary = Summarise_Salary(data_salaries_2024_FTonly, c('Field', 'Job_Title'))
 Experience_Level_Summary = Summarise_Salary(data_salaries_2024_FTonly, 'Experience_Level')
@@ -148,6 +191,8 @@ Field_Experience_Summary_asc = Field_Experience_Summary %>% arrange(Avg_Salary_U
 Field_Time_Arrangement_Summary_asc = Field_Time_Arrangement_Summary %>% arrange(Avg_Salary_USD)
 Company_Location_Name_Summary_asc = Company_Location_Name_Summary %>% arrange(Avg_Salary_USD)
 International_by_Location_Summary_asc = International_by_Location_Summary %>% arrange(Avg_Salary_USD)
+
+#Top & Bottom 10 of overall dataset
 formattable(
   head(data_salaries_2024_select,10),
   list(
@@ -176,6 +221,8 @@ formattable(
     )
   )
 )
+
+#Define Summary table function
 Pay_Summary_by = function(df) {
   formattable(
     df,
@@ -211,9 +258,13 @@ Pay_Summary_by = function(df) {
     )
   )
 }
+
+#Define Top 10 summary function
 Top10_Pay_Summary_by = function(df) {
   Pay_Summary_by(head(df, 10))
 }
+
+#Pay Summary tables
 Pay_Summary_by(Experience_Level_Summary)
 Pay_Summary_by(Work_Time_Arrangement_Summary)
 Pay_Summary_by(Company_Size_Summary)
@@ -234,6 +285,8 @@ Top10_Pay_Summary_by(Company_Location_Size_Summary)
 Top10_Pay_Summary_by(Company_Location_Size_Summary_asc)
 Top10_Pay_Summary_by(International_by_Location_Summary)
 Top10_Pay_Summary_by(International_by_Location_Summary_asc)
+
+#World Map Plots by Average Salary and Job Count
 library(plotly)
 World_Map_by_Salary = plot_ly(
   data = Company_Location_Name_Summary,
@@ -273,6 +326,8 @@ World_Map_by_Job_Count = plot_ly(
     )
   )
 World_Map_by_Job_Count
+
+#Overall Histogram
 Data_Salary_Overall_Histogram = plot_ly(data_salaries_2024_select, x = ~Salary_USD) %>%
   add_histogram(name = 'Overall FT Salary Distribution', nbinsx = 50, opacity = 1) %>%
   add_trace(
@@ -296,6 +351,8 @@ Data_Salary_Overall_Histogram = plot_ly(data_salaries_2024_select, x = ~Salary_U
     bargap = 0.01
   )
 Data_Salary_Overall_Histogram
+
+#Define Stacked Histogram function
 Stacked_Histogram = function(df, catcol, numcol = 'Salary_USD') {
   plot_ly(
     data = df,
@@ -311,6 +368,8 @@ Stacked_Histogram = function(df, catcol, numcol = 'Salary_USD') {
       barmode = 'overlay'
     )
 }
+
+#Define Box Plot function (1Lvl)
 Box_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
   plot_ly(
     data = df,
@@ -319,6 +378,8 @@ Box_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
     type = 'box'
   )
 }
+
+#Define Box Plot function (2Lvl)
 Box_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
   plot_ly(
     data = df,
@@ -327,8 +388,10 @@ Box_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
     color = ~get(subLvl),
     type = 'box'
   ) %>%
-    layout(boxmode = 'group')  # Side-by-side grouping
+    layout(boxmode = 'group')
 }
+
+#Define Violin Plot function (1Lvl)
 Violin_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
   plot_ly(
     data = df,
@@ -345,6 +408,8 @@ Violin_1Lvl = function(df, lvl, numcol = 'Salary_USD') {
       yaxis = list(title = lvl)
     )
 }
+
+#Define Violin Plot function (2Lvl)
 Violin_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
   plot_ly(
     data = df,
@@ -362,6 +427,8 @@ Violin_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD') {
       violinmode = 'group'
     )
 }
+
+#Define Bar Plot function (1Lvl)
 Bar_1Lvl = function(df, lvl, numcol = 'Salary_USD', aggfun = mean) {
   df_summary = df %>%
     group_by(across(all_of(lvl))) %>%
@@ -378,6 +445,8 @@ Bar_1Lvl = function(df, lvl, numcol = 'Salary_USD', aggfun = mean) {
       yaxis = list(title = numcol)
     )
 }
+
+#Define Bar Plot function (2Lvl)
 Bar_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD', aggfun = mean) {
   df_summary = df %>%
     group_by(across(all_of(c(lvl, subLvl)))) %>%
@@ -394,6 +463,8 @@ Bar_2Lvl = function(df, lvl, subLvl, numcol = 'Salary_USD', aggfun = mean) {
       yaxis = list(title = numcol),
       barmode = 'group')
 }
+
+#Define Annual Trend Salary Bar Plot function
 Bar_Trend_Salary = function(df, subLvl, numcol = 'Salary_USD', aggfun = mean) {
   df_summary = df %>%
     group_by(across(all_of(c('Work_Year', subLvl)))) %>%
@@ -411,6 +482,8 @@ Bar_Trend_Salary = function(df, subLvl, numcol = 'Salary_USD', aggfun = mean) {
       barmode = 'group'
     )
 }
+
+#Define Annual Trend Job Count Bar Plot function
 Bar_Trend_Count = function(df, subLvl) {
   df_summary = df %>%
     group_by(across(all_of(c('Work_Year', subLvl)))) %>%
@@ -429,6 +502,8 @@ Bar_Trend_Count = function(df, subLvl) {
       barmode = 'group'
     )
 }
+
+#Define Pie Plot function w/ Gradient (1Lvl)
 Pie_1Lvl_Gradient = function(df_summary, lvl, numcol = 'Avg_Salary_USD') {
   viridis = c(
     '#440154', '#482777', '#3E4989', '#31688E', '#26828E',
@@ -446,6 +521,8 @@ Pie_1Lvl_Gradient = function(df_summary, lvl, numcol = 'Avg_Salary_USD') {
       title = deparse(substitute(df_summary))
     )
 }
+
+#Define Pie Plot function w/o Gradient (1Lvl)
 Pie_1Lvl = function(df_summary, lvl) {
   plot_ly(
     data = df_summary,
@@ -457,6 +534,8 @@ Pie_1Lvl = function(df_summary, lvl) {
       title = paste('% of Jobs by', lvl)
     )
 }
+
+#Define Sunburst Plot function
 Sunburst_2Lvl = function(df_summary, lvl, sublvl, numcol = 'Percentage') {
   df_summary = df_summary %>%
     rename(Level = all_of(lvl),
@@ -495,6 +574,8 @@ Sunburst_2Lvl = function(df_summary, lvl, sublvl, numcol = 'Percentage') {
     branchvalues = 'total'
   ) %>% layout(title = paste('% of rows by', lvl, sublvl))
 }
+
+#Define Mosaic Plot function
 Mosaic_2Lvl = function(df, lvl, sublvl) {
   mosaicplot(
     table(df[[lvl]], df[[sublvl]]),
@@ -506,6 +587,8 @@ Mosaic_2Lvl = function(df, lvl, sublvl) {
     cex.axis = 0.9
   )
 }
+
+#Print all desired plots of summary tables
 Stacked_Histogram(data_salaries_2024_FTonly, 'Field')
 Stacked_Histogram(data_salaries_2024_FTonly, 'Experience_Level')
 Stacked_Histogram(data_salaries_2024, 'Work_Time_Arrangement')

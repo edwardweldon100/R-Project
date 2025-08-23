@@ -28,7 +28,7 @@ titles = sort(unique(data$Job_Title))
 times = levels(data$Work_Time_Arrangement)
 office_arrangements = levels(data$Work_Office_Arrangement)
 continents = levels(data$Continent)
-countries = sort(unique(data$Company_Location_Name))
+countries = sort(unique(data$Country))
 sizes = levels(data$Company_Size)
 
 
@@ -169,7 +169,7 @@ World_Map_by_Salary = function(df) {
     type = 'choropleth',
     locations = ~Company_Location_Code3,
     z = ~Avg_Salary_USD,
-    text = ~Company_Location_Name,
+    text = ~Country,
     colorscale = 'Blues',
     reversescale = TRUE,
     locationmode = 'ISO-3'
@@ -295,23 +295,23 @@ ui = fluidPage(
                      selectizeInput('Field', NULL, choices = fields, multiple = TRUE, options = list(plugins = list('remove_button')))),
                  
                  div(strong('Job Title'),
-                     fluidRow(column(6, actionButton('select_all_Title', 'Select All')),
-                              column(6, actionButton('clear_all_Title', 'Clear All'))),
+                     fluidRow(column(6, actionButton('select_all_Job_Title', 'Select All')),
+                              column(6, actionButton('clear_all_Job_Title', 'Clear All'))),
                      selectizeInput('Job_Title', NULL, choices = titles, multiple = TRUE, options = list(plugins = list('remove_button')))),
                  
                  div(strong('Experience Level'),
-                     fluidRow(column(6, actionButton('select_all_Exp', 'Select All')),
-                              column(6, actionButton('clear_all_Exp', 'Clear All'))),
+                     fluidRow(column(6, actionButton('select_all_Experience_Level', 'Select All')),
+                              column(6, actionButton('clear_all_Experience_Level', 'Clear All'))),
                      selectizeInput('Experience_Level', NULL, choices = exp_lvls, multiple = TRUE, options = list(plugins = list('remove_button')))),
                  
                  div(strong('Work Time Arrangement'),
-                     fluidRow(column(6, actionButton('select_all_Time', 'Select All')),
-                              column(6, actionButton('clear_all_Time', 'Clear All'))),
+                     fluidRow(column(6, actionButton('select_all_Work_Time_Arrangement', 'Select All')),
+                              column(6, actionButton('clear_all_Work_Time_Arrangement', 'Clear All'))),
                      selectizeInput('Work_Time_Arrangement', NULL, choices = times, multiple = TRUE, options = list(plugins = list('remove_button')))),
                  
                  div(strong('Work Office Arrangement'),
-                     fluidRow(column(6, actionButton('select_all_Office', 'Select All')),
-                              column(6, actionButton('clear_all_Office', 'Clear All'))),
+                     fluidRow(column(6, actionButton('select_all_Work_Office_Arrangement', 'Select All')),
+                              column(6, actionButton('clear_all_Work_Office_Arrangement', 'Clear All'))),
                      selectizeInput('Work_Office_Arrangement', NULL, choices = office_arrangements, multiple = TRUE, options = list(plugins = list('remove_button')))),
                  
                  div(strong('Continent'),
@@ -322,11 +322,11 @@ ui = fluidPage(
                  div(strong('Country'),
                      fluidRow(column(6, actionButton('select_all_Country', 'Select All')),
                               column(6, actionButton('clear_all_Country', 'Clear All'))),
-                     selectizeInput('Company_Location_Name', NULL, choices = countries, multiple = TRUE, options = list(plugins = list('remove_button')))),
+                     selectizeInput('Country', NULL, choices = countries, multiple = TRUE, options = list(plugins = list('remove_button')))),
                  
                  div(strong('Company Size'),
-                     fluidRow(column(6, actionButton('select_all_Size', 'Select All')),
-                              column(6, actionButton('clear_all_Size', 'Clear All'))),
+                     fluidRow(column(6, actionButton('select_all_Company_Size', 'Select All')),
+                              column(6, actionButton('clear_all_Company_Size', 'Clear All'))),
                      selectizeInput('Company_Size', NULL, choices = sizes, multiple = TRUE, options = list(plugins = list('remove_button'))))
                ),
                mainPanel(plotlyOutput('salary_plot', height = '800px'))
@@ -338,11 +338,11 @@ ui = fluidPage(
                sidebarPanel(
                  selectInput('violin_lvl', 'Grouping', 
                              choices = c('Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
-                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                                         'Work_Office_Arrangement', 'Continent', 'Country', 'Company_Size'), 
                              selected = 'Field'),
                  selectInput('violin_subLvl', 'Sub-Grouping', 
                              choices = c('NULL', 'Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
-                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                                         'Work_Office_Arrangement', 'Continent', 'Country', 'Company_Size'), 
                              selected = 'NULL')
                ),
                mainPanel(plotlyOutput('violin_plot', height = '800px'))
@@ -354,19 +354,15 @@ ui = fluidPage(
                sidebarPanel(
                  selectInput('pie_lvl', 'Grouping', 
                              choices = c('Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
-                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                                         'Work_Office_Arrangement', 'Continent', 'Country', 'Company_Size'), 
                              selected = 'Field'),
                  selectInput('sunburst_subLvl', 'Sub-Grouping', 
                              choices = c('NULL', 'Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
-                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                                         'Work_Office_Arrangement', 'Continent', 'Country', 'Company_Size'), 
                              selected = 'NULL')
                ),
                mainPanel(plotlyOutput('pie_sunburst', height = '800px'))
              )
-    ),
-    
-    tabPanel('World Map',
-             mainPanel(plotlyOutput('world_map_plot', height = '1200px'))
     ),
     
     tabPanel('Bar',
@@ -374,16 +370,17 @@ ui = fluidPage(
                sidebarPanel(
                  selectInput('bar_lvl', 'Grouping', 
                              choices = c('Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
-                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                                         'Work_Office_Arrangement', 'Continent', 'Country', 'Company_Size'), 
                              selected = 'Field'),
                  selectInput('bar_subLvl', 'Sub-Grouping', 
                              choices = c('NULL', 'Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
-                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                                         'Work_Office_Arrangement', 'Continent', 'Country', 'Company_Size'), 
                              selected = 'NULL')
                ),
                mainPanel(plotlyOutput('bar_plot', height = '800px'))
              )
     ),
+    
     tabPanel('Annual Trend',
              mainPanel(plotlyOutput('annual_trend_plot', height = '800px'))
     ),
@@ -391,13 +388,17 @@ ui = fluidPage(
     tabPanel('Annual Trend- Breakdown',
              sidebarLayout(
                sidebarPanel(
-                 selectInput('trend_subLvl', 'Color By', 
+                 selectInput('trend_subLvl', 'Grouping', 
                              choices = c('Field', 'Job_Title', 'Experience_Level', 'Work_Time_Arrangement',
-                                         'Work_Office_Arrangement', 'Continent', 'Company_Location_Name', 'Company_Size'), 
+                                         'Work_Office_Arrangement', 'Continent', 'Country', 'Company_Size'), 
                              selected = 'Field')
                ),
                mainPanel(plotlyOutput('annual_trend_plot_sub', height = '800px'))
              )
+    ),
+    
+    tabPanel('World Map',
+             mainPanel(plotlyOutput('world_map_plot', height = '1200px'))
     )
   )
 )
@@ -415,7 +416,7 @@ server = function(input, output, session) {
     if (length(input$Work_Time_Arrangement)) df = df %>% filter(Work_Time_Arrangement %in% input$Work_Time_Arrangement)
     if (length(input$Work_Office_Arrangement)) df = df %>% filter(Work_Office_Arrangement %in% input$Work_Office_Arrangement)
     if (length(input$Continent)) df = df %>% filter(Continent %in% input$Continent)
-    if (length(input$Company_Location_Name)) df = df %>% filter(Company_Location_Name %in% input$Company_Location_Name)
+    if (length(input$Country)) df = df %>% filter(Country %in% input$Country)
     if (length(input$Company_Size)) df = df %>% filter(Company_Size %in% input$Company_Size)
     df
   })
@@ -427,16 +428,16 @@ server = function(input, output, session) {
     observe({
       df = filtered_data()
       valid_choices = sort(unique(df[[column]]))
-      updateSelectInput(session, inputId,
-                        choices = valid_choices,
-                        selected = input[[inputId]][input[[inputId]] %in% valid_choices])
+      updateSelectizeInput(session, inputId,
+                           choices = valid_choices,
+                           selected = input[[inputId]][input[[inputId]] %in% valid_choices])
     })
     
     observeEvent(input[[paste0('select_all_', inputId)]], {
-      updateSelectInput(session, inputId, selected = sort(unique(filtered_data()[[column]])))
+      updateSelectizeInput(session, inputId, selected = sort(unique(filtered_data()[[column]])))
     })
     observeEvent(input[[paste0('clear_all_', inputId)]], {
-      updateSelectInput(session, inputId, selected = character(0))
+      updateSelectizeInput(session, inputId, selected = character(0))
     })
   }
   
@@ -446,7 +447,7 @@ server = function(input, output, session) {
   update_choices('Work_Time_Arrangement', 'Work_Time_Arrangement')
   update_choices('Work_Office_Arrangement', 'Work_Office_Arrangement')
   update_choices('Continent', 'Continent')
-  update_choices('Company_Location_Name', 'Company_Location_Name')
+  update_choices('Country', 'Country')
   update_choices('Company_Size', 'Company_Size')
   
   
@@ -454,15 +455,6 @@ server = function(input, output, session) {
   
   output$salary_plot = renderPlotly({
     Histogram_ECDF(filtered_data_2024())
-  })
-  
-  output$world_map_plot = renderPlotly({
-    df = filtered_data_2024()
-    if (nrow(df) == 0) return(NULL)
-    df_summary = df %>%
-      group_by(Company_Location_Name, Company_Location_Code3) %>%
-      summarise(Avg_Salary_USD = mean(Salary_USD, na.rm = TRUE), .groups = 'drop')
-    World_Map_by_Salary(df_summary)
   })
   
   output$violin_plot = renderPlotly({
@@ -483,6 +475,15 @@ server = function(input, output, session) {
   
   output$annual_trend_plot_sub = renderPlotly({
     Bar_Trend_Salary_Sub(filtered_data(), input$trend_subLvl)
+  })
+  
+  output$world_map_plot = renderPlotly({
+    df = filtered_data_2024()
+    if (nrow(df) == 0) return(NULL)
+    df_summary = df %>%
+      group_by(Country, Company_Location_Code3) %>%
+      summarise(Avg_Salary_USD = mean(Salary_USD, na.rm = TRUE), .groups = 'drop')
+    World_Map_by_Salary(df_summary)
   })
 }
 
