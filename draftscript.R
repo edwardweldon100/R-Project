@@ -125,6 +125,7 @@ data_salaries_2024_FTonly = data_salaries_2024 %>% filter(Work_Time_Arrangement 
 data_salaries_2024_select = data_salaries_2024 %>% filter(Work_Time_Arrangement == 'Full-time') %>% 
   select(Field, Job_Title, Experience_Level, Work_Time_Arrangement, Work_Office_Arrangement, Company_Size, USA, Continent, Company_Location_Name, Company_Location_Code3, International, Salary_USD)
 data_salaries_2024_select_asc = data_salaries_2024_select %>% arrange(Salary_USD)
+<<<<<<< HEAD
 
 #Prepare data frame to load into Shiny app
 data_salaries_shiny = data_salaries %>% 
@@ -133,6 +134,11 @@ colnames(data_salaries_shiny)[which(names(data_salaries_shiny) == 'Company_Locat
 write.csv(data_salaries_shiny, file='Data Salaries- Shiny.csv', row.names=F)
 
 #Total 2024 Job Count for later formula references
+=======
+data_salaries_shiny = data_salaries %>% 
+  select(Work_Year, Field, Job_Title, Experience_Level, Work_Time_Arrangement, Work_Office_Arrangement, Company_Size, Continent, Company_Location_Name, , Company_Location_Code3, Salary_USD)
+write.csv(data_salaries_shiny, file='Data Salaries- Shiny.csv', row.names=F)
+>>>>>>> c9839f3abc33fa5a631bce80224ac3a4ed2b2b2a
 Total_Count_2024 = nrow(data_salaries_2024)
 
 #FX Rate table
@@ -163,11 +169,15 @@ Summarise_Salary = function(df, group_cols) {
     ) %>%
     arrange(desc(Avg_Salary_USD))
 }
+<<<<<<< HEAD
 
 #Print FX Rates
 FX_Rates_2024
 
 #Summary tables for plotting & analysis
+=======
+FX_Rates_2024
+>>>>>>> c9839f3abc33fa5a631bce80224ac3a4ed2b2b2a
 Field_Summary = Summarise_Salary(data_salaries_2024_FTonly, 'Field')
 Field_Title_Summary = Summarise_Salary(data_salaries_2024_FTonly, c('Field', 'Job_Title'))
 Experience_Level_Summary = Summarise_Salary(data_salaries_2024_FTonly, 'Experience_Level')
