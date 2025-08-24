@@ -19,7 +19,7 @@ factor_mutation = function(df) {
     Company_Size = factor(Company_Size, levels = c('S', 'M', 'L'))
   )
 }
-
+####
 data = factor_mutation(data)
 data_2024 = data %>% filter(Work_Year == 2024)
 
